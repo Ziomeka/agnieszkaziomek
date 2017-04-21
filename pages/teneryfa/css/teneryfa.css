@@ -1,0 +1,20 @@
+h3 {
+	text-align: center;
+}
+
+#teneryfa {
+	max-width: 1024px;
+	margin:auto;
+}
+
+.header {
+	max-height: 60px;
+}
+
+.carousel-caption {
+	background: rgba(0,0,0,0.5);
+	background: -webkit-radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1), rgba(0,0,0,0)); /* Safari 5.1 to 6.0 */
+  	background: -o-radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1), rgba(0,0,0,0)); /* For Opera 11.6 to 12.0 */
+  	background: -moz-radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+  	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1), rgba(0,0,0,0)); /* Standard syntax */
+}
