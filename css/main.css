@@ -58,6 +58,15 @@ html, body {
 	transition: background .5s;  
 }
 
+/*pasek jezyka */
+.language {
+	text-align: right;
+}
+.language a{
+	color:white;
+
+}
+
 /* projekty */
 
 .tile {
