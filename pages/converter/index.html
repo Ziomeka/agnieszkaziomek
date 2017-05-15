@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Simple converter</title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Convert EUR to PLN</h1>
+                <div class="input">
+                    <form>
+                        <small class="form-text text-muted">ENTER EUR AMOUNT</small>  
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="EUR">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="button" id="convert">CONVERT TO PLN</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>     
+                </br>
+                <div class="row" id="tileContainer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <center><a href="https://github.com/Ziomeka/Exchange-converter">Source code on GitHub</a></center>        
+
+    
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous">
+</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.js"></script>
+
+<script> 
+$(function(){
+    var tileData=[];   
+    var convert=function(){
+    addTile();
+    displayTiles();
+    };
+
+    var addTile=function(){
+        tileData.push({
+            exchange: computePLN(grabEUR(),randomizeExchange()),
+            date: grabDate()
+        })
+    };
+
+    var displayTiles=function(){
+        $('.tile').remove();
+        for (i=0; i<tileData.length; i++){
+            var inner='<div class="col-md-6 tile"><div class="amount"><p>PLN AMOUNT</p><h1>' + tileData[i].exchange + '</h1></div>' + '<p class="data"><span class="glyphicon glyphicon-time"></span> ' + tileData[i].date +'</p></div>';
+            $('#tileContainer').append(inner);
+        }
+    };
+
+    var grabEUR=function(){
+        var euro=$("#EUR").val();
+        $("#EUR").val("");
+        return euro;
+    };
+
+    var randomizeExchange=function(){
+        var rand=Math.floor((Math.random() * 100) + 1);
+        return 4.2 * (1+   (rand - 50)/1000);
+    }
+
+    var computePLN=function(eur,ex){
+        return Math.round(ex*eur*10000)/10000;
+    }
+
+    var grabDate=function(){
+        var d=new Date();
+        return moment(d).format("YYYY.MM.DD HH:mm");
+    }
+
+    $("#convert").click(convert);
+})
+
+
+</script>
+
+</body>
+</html>

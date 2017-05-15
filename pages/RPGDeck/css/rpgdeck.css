@@ -1,4 +1,15 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	background-color: #E3E7E6;
+}
+
+.container{
+	text-align: center;
+}
+
+.container p
+{
+
+	text-align: justify;
 }

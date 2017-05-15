@@ -1,76 +1,139 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link href="css/inz.css" rel="stylesheet" type="text/css"/>
-<title>Metody filtracji sygnałów pomiarowych</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="jquery.jqplot.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<div class="menu">
-	<img src="img/logo.png"/>
-	<ul>
-		<li>Streszczenie</li>
-		<li>Wstęp teoretyczny</li>
-		<li>Implementacja algorytmu</li>
-		<li>Zastosowania praktyczne</li>
-		<li>Podsumowanie</li>
-	</ul>
-</div>
 
-<div class="content">
-<h1>Under construction - strona pracy inżynierskiej</h1>
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida ligula sed nibh semper venenatis. Integer sagittis maximus eros, id dignissim lectus blandit ut. In tempor dolor in lacus vulputate, id dignissim risus pharetra. Proin porta libero leo, tristique dictum lectus cursus vel. Nunc nec porta nisl. Maecenas facilisis nibh et maximus feugiat. Quisque sodales placerat diam eu lacinia.</p>
-<h1>Streszczenie</h1>
-<p>Nunc tellus orci, varius eget scelerisque vel, feugiat eu felis. Pellentesque laoreet, justo in vehicula consectetur, ipsum felis scelerisque nunc, eu aliquet diam neque in risus. Phasellus et nunc lectus. Etiam convallis sodales luctus. Duis interdum ultrices nisl id vestibulum. Ut eget diam leo. Sed vitae ex pharetra, feugiat mauris a, lobortis lectus. Phasellus congue vestibulum libero, id varius felis tempor at. Maecenas leo sem, dignissim non ultrices a, faucibus et dui.
+    <div class='container'>
+    <h1>Data processing online tool - under construction</h1>
+    <p>This site is part of my Engineering Thesis in field of measurement noise reduction at Faculty of Electrical Engineering of the Warsaw University of Technology. I started with plot drawing for uploaded or sample data. The goal is to find periodicity using autocorrelation and use it to smooth data with average.</p>
+    <p>This tool will develop more complicated over time.</p>
+    </div>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-3'>
+                <form>    
+                    <div class="form-group">
+                        <label for="fileInput" class="btn btn-info">
+                            <input type="file" id="fileInput" style="display:none;"  onchange="$('#upload-file-info').html($(this).val());">
+                            File input
+                        </label>
+                        <span id="upload-file-info"></span>
+                        </br>
+                        <small class="form-text text-muted">Only plain text files. Data separated with space.</small>
 
-Vestibulum velit nisl, finibus sit amet mollis sit amet, faucibus in magna. Nunc mi nulla, lobortis eu tristique ut, accumsan in ante. Curabitur venenatis felis erat, vitae suscipit dui eleifend at. Mauris venenatis ultrices venenatis. Nam sodales, felis quis mattis finibus, elit ipsum aliquam purus, non tristique dolor tortor in nibh. Pellentesque tristique commodo felis sit amet consequat. Duis vitae semper erat. Duis suscipit velit id neque ultrices, eu varius tellus tincidunt. Donec posuere egestas massa, quis dignissim ligula. Donec risus neque, pharetra non scelerisque a, tristique a justo. Cras blandit tortor ac fermentum malesuada.
+                        or 
+                        </br>
+                        <button type="button" class="btn btn-info" id="sampleFile"> Use sample data </button>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary" id="subFile"> RUN </button>
+            </div>
+            <div class='col-md-9'>
+                <h2>Output</h2> 
+                <div id='chart1'></div>
+            </div>
+        </div>
+    </div>
 
-Pellentesque ligula eros, lacinia quis varius in, eleifend eget tellus. Mauris tincidunt lorem arcu, at efficitur enim dictum a. Etiam consequat tincidunt nulla. Nunc dictum egestas purus, fermentum vestibulum velit sollicitudin in. Praesent sit amet elit volutpat, pulvinar neque ultricies, suscipit lectus. Integer tincidunt tortor sed lectus cursus, sed elementum ligula dictum. Duis sit amet purus neque. Duis et aliquet sapien, eget gravida purus. Etiam turpis dolor, hendrerit et tempus non, vestibulum hendrerit enim. Sed nec finibus justo. Nulla et tellus iaculis, vulputate orci vitae, mollis leo. Ut urna sem, dapibus non maximus in, vulputate vitae nulla. Cras hendrerit tincidunt iaculis. Suspendisse laoreet nisl at velit tristique laoreet.
-</p>
-<h1>Wstęp teoretyczny</h1>
-<p>Ut vitae dui euismod, scelerisque magna eget, hendrerit ipsum. Praesent nibh lorem, tristique id ultricies ut, porttitor id nunc. Donec fermentum, odio ut scelerisque condimentum, turpis lectus blandit risus, id tincidunt mi diam ut ipsum. Morbi consequat eget arcu vel cursus. Nunc vel tellus ac sem placerat lacinia a vel ex. Pellentesque tincidunt tempus ex, nec pharetra ex tempus consectetur. Etiam tristique dignissim turpis, sit amet pharetra magna pulvinar eu. Vivamus convallis lacus a lorem dapibus volutpat. In ornare sapien id tempus gravida. Sed imperdiet a dui et luctus. Maecenas laoreet purus quis sem placerat maximus. Aliquam venenatis a massa aliquet fermentum.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida ligula sed nibh semper venenatis. Integer sagittis maximus eros, id dignissim lectus blandit ut. In tempor dolor in lacus vulputate, id dignissim risus pharetra. Proin porta libero leo, tristique dictum lectus cursus vel. Nunc nec porta nisl. Maecenas facilisis nibh et maximus feugiat. Quisque sodales placerat diam eu lacinia.
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="plugins/jqplot.canvasTextRenderer.js"></script>
+<script type="text/javascript" src="plugins/jqplot.canvasAxisLabelRenderer.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-Nunc tellus orci, varius eget scelerisque vel, feugiat eu felis. Pellentesque laoreet, justo in vehicula consectetur, ipsum felis scelerisque nunc, eu aliquet diam neque in risus. Phasellus et nunc lectus. Etiam convallis sodales luctus. Duis interdum ultrices nisl id vestibulum. Ut eget diam leo. Sed vitae ex pharetra, feugiat mauris a, lobortis lectus. Phasellus congue vestibulum libero, id varius felis tempor at. Maecenas leo sem, dignissim non ultrices a, faucibus et dui.
+<script>
+$(function(){
+    var textFile ='file not loaded'; 
 
-Vestibulum velit nisl, finibus sit amet mollis sit amet, faucibus in magna. Nunc mi nulla, lobortis eu tristique ut, accumsan in ante. Curabitur venenatis felis erat, vitae suscipit dui eleifend at. Mauris venenatis ultrices venenatis. Nam sodales, felis quis mattis finibus, elit ipsum aliquam purus, non tristique dolor tortor in nibh. Pellentesque tristique commodo felis sit amet consequat. Duis vitae semper erat. Duis suscipit velit id neque ultrices, eu varius tellus tincidunt. Donec posuere egestas massa, quis dignissim ligula. Donec risus neque, pharetra non scelerisque a, tristique a justo. Cras blandit tortor ac fermentum malesuada.
+    var getData =function(event) {
+            var files = event.target.files; //FileList object
+            for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+           //Only plain text
+                if (!file.type.match('plain')) continue;
+                var picReader = new FileReader();
+                picReader.addEventListener("load", function(event) {
+                textFile = event.target.result;
+                });
 
-Pellentesque ligula eros, lacinia quis varius in, eleifend eget tellus. Mauris tincidunt lorem arcu, at efficitur enim dictum a. Etiam consequat tincidunt nulla. Nunc dictum egestas purus, fermentum vestibulum velit sollicitudin in. Praesent sit amet elit volutpat, pulvinar neque ultricies, suscipit lectus. Integer tincidunt tortor sed lectus cursus, sed elementum ligula dictum. Duis sit amet purus neque. Duis et aliquet sapien, eget gravida purus. Etiam turpis dolor, hendrerit et tempus non, vestibulum hendrerit enim. Sed nec finibus justo. Nulla et tellus iaculis, vulputate orci vitae, mollis leo. Ut urna sem, dapibus non maximus in, vulputate vitae nulla. Cras hendrerit tincidunt iaculis. Suspendisse laoreet nisl at velit tristique laoreet.
-</p>
-<p>
-Ut vitae dui euismod, scelerisque magna eget, hendrerit ipsum. Praesent nibh lorem, tristique id ultricies ut, porttitor id nunc. Donec fermentum, odio ut scelerisque condimentum, turpis lectus blandit risus, id tincidunt mi diam ut ipsum. Morbi consequat eget arcu vel cursus. Nunc vel tellus ac sem placerat lacinia a vel ex. Pellentesque tincidunt tempus ex, nec pharetra ex tempus consectetur. Etiam tristique dignissim turpis, sit amet pharetra magna pulvinar eu. Vivamus convallis lacus a lorem dapibus volutpat. In ornare sapien id tempus gravida. Sed imperdiet a dui et luctus. Maecenas laoreet purus quis sem placerat maximus. Aliquam venenatis a massa aliquet fermentum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida ligula sed nibh semper venenatis. Integer sagittis maximus eros, id dignissim lectus blandit ut. In tempor dolor in lacus vulputate, id dignissim risus pharetra. Proin porta libero leo, tristique dictum lectus cursus vel. Nunc nec porta nisl. Maecenas facilisis nibh et maximus feugiat. Quisque sodales placerat diam eu lacinia.
+                //Read the text file
+                picReader.readAsText(file);
+            }
+    }
 
-Nunc tellus orci, varius eget scelerisque vel, feugiat eu felis. Pellentesque laoreet, justo in vehicula consectetur, ipsum felis scelerisque nunc, eu aliquet diam neque in risus. Phasellus et nunc lectus. Etiam convallis sodales luctus. Duis interdum ultrices nisl id vestibulum. Ut eget diam leo. Sed vitae ex pharetra, feugiat mauris a, lobortis lectus. Phasellus congue vestibulum libero, id varius felis tempor at. Maecenas leo sem, dignissim non ultrices a, faucibus et dui.
+    var dataPrep=function(data){
+        var temp=data;
+        temp = temp.replace(/\s+/g,' ');
+        var array=data.split(" ");
+        return(array);
+        }
+    
+    var dataValid=function(data){
+        for (var i=0; i<data.length; i++)
+        {
+            if (!($.isNumeric(data[i]))) return false;
+        }
+        return true;
+    } 
 
-Vestibulum velit nisl, finibus sit amet mollis sit amet, faucibus in magna. Nunc mi nulla, lobortis eu tristique ut, accumsan in ante. Curabitur venenatis felis erat, vitae suscipit dui eleifend at. Mauris venenatis ultrices venenatis. Nam sodales, felis quis mattis finibus, elit ipsum aliquam purus, non tristique dolor tortor in nibh. Pellentesque tristique commodo felis sit amet consequat. Duis vitae semper erat. Duis suscipit velit id neque ultrices, eu varius tellus tincidunt. Donec posuere egestas massa, quis dignissim ligula. Donec risus neque, pharetra non scelerisque a, tristique a justo. Cras blandit tortor ac fermentum malesuada.
+    var displayOutcome=function(stuff){
+        $('#chart1').html('');
+        var plot1 = $.jqplot ('chart1', [stuff], {
+            title: 'Dane wejściowe',
+            axesDefaults: {labelRenderer: $.jqplot.CanvasAxisLabelRenderer},
+            axes: {
+                xaxis: {
+                       label: "Sample number",
+                       pad: 0
+                       },
+                yaxis: {
+                        label: "Y Axis",
+                        max: 100
+                        }
+            },
+            
+        });
+        
+       // $('#display').text(stuff);
+    }  
 
-Pellentesque ligula eros, lacinia quis varius in, eleifend eget tellus. Mauris tincidunt lorem arcu, at efficitur enim dictum a. Etiam consequat tincidunt nulla. Nunc dictum egestas purus, fermentum vestibulum velit sollicitudin in. Praesent sit amet elit volutpat, pulvinar neque ultricies, suscipit lectus. Integer tincidunt tortor sed lectus cursus, sed elementum ligula dictum. Duis sit amet purus neque. Duis et aliquet sapien, eget gravida purus. Etiam turpis dolor, hendrerit et tempus non, vestibulum hendrerit enim. Sed nec finibus justo. Nulla et tellus iaculis, vulputate orci vitae, mollis leo. Ut urna sem, dapibus non maximus in, vulputate vitae nulla. Cras hendrerit tincidunt iaculis. Suspendisse laoreet nisl at velit tristique laoreet.
+    var fileRun=function(){
+        var element=dataPrep(textFile);
+        
+        if (!dataValid(element)) {$('#display').text('Data not valid! Only numbers, please!')}
+        else {displayOutcome(element)};
+    }    
+    
+//---------------------------------------------------------------------------------
+    //getting file
+    if (window.File && window.FileList && window.FileReader) {
+        $("#fileInput").on("change",getData) 
+        }
+    else {
+        alert("Your browser does not support File API");
+    }
+    $('#sampleFile').click(function(){
+        textFile='23 45 6 15 2 7 -3 7 88 2.4 12';
+        $('#upload-file-info').html('Sample data used');
+    })
 
-Ut vitae dui euismod, scelerisque magna eget, hendrerit ipsum. Praesent nibh lorem, tristique id ultricies ut, porttitor id nunc. Donec fermentum, odio ut scelerisque condimentum, turpis lectus blandit risus, id tincidunt mi diam ut ipsum. Morbi consequat eget arcu vel cursus. Nunc vel tellus ac sem placerat lacinia a vel ex. Pellentesque tincidunt tempus ex, nec pharetra ex tempus consectetur. Etiam tristique dignissim turpis, sit amet pharetra magna pulvinar eu. Vivamus convallis lacus a lorem dapibus volutpat. In ornare sapien id tempus gravida. Sed imperdiet a dui et luctus. Maecenas laoreet purus quis sem placerat maximus. Aliquam venenatis a massa aliquet fermentum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida ligula sed nibh semper venenatis. Integer sagittis maximus eros, id dignissim lectus blandit ut. In tempor dolor in lacus vulputate, id dignissim risus pharetra. Proin porta libero leo, tristique dictum lectus cursus vel. Nunc nec porta nisl. Maecenas facilisis nibh et maximus feugiat. Quisque sodales placerat diam eu lacinia.
+    //display file
 
-Nunc tellus orci, varius eget scelerisque vel, feugiat eu felis. Pellentesque laoreet, justo in vehicula consectetur, ipsum felis scelerisque nunc, eu aliquet diam neque in risus. Phasellus et nunc lectus. Etiam convallis sodales luctus. Duis interdum ultrices nisl id vestibulum. Ut eget diam leo. Sed vitae ex pharetra, feugiat mauris a, lobortis lectus. Phasellus congue vestibulum libero, id varius felis tempor at. Maecenas leo sem, dignissim non ultrices a, faucibus et dui.
+    $('#subFile').click(fileRun);
+    
+});
 
-Vestibulum velit nisl, finibus sit amet mollis sit amet, faucibus in magna. Nunc mi nulla, lobortis eu tristique ut, accumsan in ante. Curabitur venenatis felis erat, vitae suscipit dui eleifend at. Mauris venenatis ultrices venenatis. Nam sodales, felis quis mattis finibus, elit ipsum aliquam purus, non tristique dolor tortor in nibh. Pellentesque tristique commodo felis sit amet consequat. Duis vitae semper erat. Duis suscipit velit id neque ultrices, eu varius tellus tincidunt. Donec posuere egestas massa, quis dignissim ligula. Donec risus neque, pharetra non scelerisque a, tristique a justo. Cras blandit tortor ac fermentum malesuada.
+        
 
-Pellentesque ligula eros, lacinia quis varius in, eleifend eget tellus. Mauris tincidunt lorem arcu, at efficitur enim dictum a. Etiam consequat tincidunt nulla. Nunc dictum egestas purus, fermentum vestibulum velit sollicitudin in. Praesent sit amet elit volutpat, pulvinar neque ultricies, suscipit lectus. Integer tincidunt tortor sed lectus cursus, sed elementum ligula dictum. Duis sit amet purus neque. Duis et aliquet sapien, eget gravida purus. Etiam turpis dolor, hendrerit et tempus non, vestibulum hendrerit enim. Sed nec finibus justo. Nulla et tellus iaculis, vulputate orci vitae, mollis leo. Ut urna sem, dapibus non maximus in, vulputate vitae nulla. Cras hendrerit tincidunt iaculis. Suspendisse laoreet nisl at velit tristique laoreet.
-
-Ut vitae dui euismod, scelerisque magna eget, hendrerit ipsum. Praesent nibh lorem, tristique id ultricies ut, porttitor id nunc. Donec fermentum, odio ut scelerisque condimentum, turpis lectus blandit risus, id tincidunt mi diam ut ipsum. Morbi consequat eget arcu vel cursus. Nunc vel tellus ac sem placerat lacinia a vel ex. Pellentesque tincidunt tempus ex, nec pharetra ex tempus consectetur. Etiam tristique dignissim turpis, sit amet pharetra magna pulvinar eu. Vivamus convallis lacus a lorem dapibus volutpat. In ornare sapien id tempus gravida. Sed imperdiet a dui et luctus. Maecenas laoreet purus quis sem placerat maximus. Aliquam venenatis a massa aliquet fermentum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida ligula sed nibh semper venenatis. Integer sagittis maximus eros, id dignissim lectus blandit ut. In tempor dolor in lacus vulputate, id dignissim risus pharetra. Proin porta libero leo, tristique dictum lectus cursus vel. Nunc nec porta nisl. Maecenas facilisis nibh et maximus feugiat. Quisque sodales placerat diam eu lacinia.
-
-Nunc tellus orci, varius eget scelerisque vel, feugiat eu felis. Pellentesque laoreet, justo in vehicula consectetur, ipsum felis scelerisque nunc, eu aliquet diam neque in risus. Phasellus et nunc lectus. Etiam convallis sodales luctus. Duis interdum ultrices nisl id vestibulum. Ut eget diam leo. Sed vitae ex pharetra, feugiat mauris a, lobortis lectus. Phasellus congue vestibulum libero, id varius felis tempor at. Maecenas leo sem, dignissim non ultrices a, faucibus et dui.
-
-Vestibulum velit nisl, finibus sit amet mollis sit amet, faucibus in magna. Nunc mi nulla, lobortis eu tristique ut, accumsan in ante. Curabitur venenatis felis erat, vitae suscipit dui eleifend at. Mauris venenatis ultrices venenatis. Nam sodales, felis quis mattis finibus, elit ipsum aliquam purus, non tristique dolor tortor in nibh. Pellentesque tristique commodo felis sit amet consequat. Duis vitae semper erat. Duis suscipit velit id neque ultrices, eu varius tellus tincidunt. Donec posuere egestas massa, quis dignissim ligula. Donec risus neque, pharetra non scelerisque a, tristique a justo. Cras blandit tortor ac fermentum malesuada.
-
-Pellentesque ligula eros, lacinia quis varius in, eleifend eget tellus. Mauris tincidunt lorem arcu, at efficitur enim dictum a. Etiam consequat tincidunt nulla. Nunc dictum egestas purus, fermentum vestibulum velit sollicitudin in. Praesent sit amet elit volutpat, pulvinar neque ultricies, suscipit lectus. Integer tincidunt tortor sed lectus cursus, sed elementum ligula dictum. Duis sit amet purus neque. Duis et aliquet sapien, eget gravida purus. Etiam turpis dolor, hendrerit et tempus non, vestibulum hendrerit enim. Sed nec finibus justo. Nulla et tellus iaculis, vulputate orci vitae, mollis leo. Ut urna sem, dapibus non maximus in, vulputate vitae nulla. Cras hendrerit tincidunt iaculis. Suspendisse laoreet nisl at velit tristique laoreet.
-
-Ut vitae dui euismod, scelerisque magna eget, hendrerit ipsum. Praesent nibh lorem, tristique id ultricies ut, porttitor id nunc. Donec fermentum, odio ut scelerisque condimentum, turpis lectus blandit risus, id tincidunt mi diam ut ipsum. Morbi consequat eget arcu vel cursus. Nunc vel tellus ac sem placerat lacinia a vel ex. Pellentesque tincidunt tempus ex, nec pharetra ex tempus consectetur. Etiam tristique dignissim turpis, sit amet pharetra magna pulvinar eu. Vivamus convallis lacus a lorem dapibus volutpat. In ornare sapien id tempus gravida. Sed imperdiet a dui et luctus. Maecenas laoreet purus quis sem placerat maximus. Aliquam venenatis a massa aliquet fermentum.
-</p>
-
-</div>
+</script>
 
 </body>
 </html>

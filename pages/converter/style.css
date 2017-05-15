@@ -1,0 +1,16 @@
+body {
+    background-color: #EDF2E8;
+}
+.amount {
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.input {
+   background-color: white; 
+   padding: 10px;
+}
+.data {
+    color: gray;
+}
