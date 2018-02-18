@@ -1,109 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Agnieszka Ziomek</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=false;">
-<meta name="description" content="" />
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="css/main.css" rel="stylesheet" type="text/css"/>
-
+	<title>Agnieszka Ziomek</title>
+	<meta charset="utf-8">
+	<meta name="viewport">
+	<meta name="description" content="" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
+	<header>
+		<h1>Agnieszka Ziomek</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">English version</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+		</section>
 
-<!-- nagłówek i nawigacja -->
+		<section>
+			<header>
+				<h2>Moje prace</h2>
+			</header>
+			<article>
+				<header>
+					<h3>Wykresy na kanwasie</h3>
+					<time datetime="2017-12-11">Grudzień 2017</time>
+				</header>
+				<p>Wykresy słupkowe na kanwasie, z możliwością filtrowania danych. </p>
+				<img src="img/projects_canvas.jpg" alt="Minaiturka widoku strony">
+			</article>
+			<article>
+				<header>
+					<h3>Autokolelacja</h3>
+					<time datetime="2017-10-15">Listopad 2017</time>
+				</header>
+				<img src="img/projects_autocorrelation.jpg" alt="Minaiturka widoku strony">
+				<p>Strona poświęcona mojej pracy inżynierskiej z zakresu odszumiania syganałów pomiarowych. Praca przygotowywana na Wydziale Elektrycznym Politechniki Warszawskiej</p>
+			</article>
+			<article>
+				<header>
+					<h3>Symulator windy</h3>
+					<time datetime="2017-02-17">Luty 2017</time>
+				</header>
+				<img src="img/projects_lift.jpg" alt="Minaiturka widoku strony">
+				<p>Symulator windy z wizualizacją</p>
+			</article>
+			<a href="#">Zobacz więcej prac</a>
+		</section>
 
-<div class="jumbotron header">
-	<h2>Agnieszka Ziomek</h2>
+		<section>
+			<h2>Kontakt</h2>
+			<a href="http://agnieszkaziomek.pl/">agnieszkaziomek.pl</a>
+			<br>
+			<p>tel: +48 605 24 84 84</p>
+			<br>
+			<a href="mailto: ziomeka@ee.pw.edu.pl">ziomeka@ee.pw.edu.pl</a><br>
+			<a href="mailto: poziomkaa@gmail.com">poziomkaa@gmail.com</a>
+		</section>
 
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
+	</main>
+	<footer>
+	</footer>
 
-
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  data-target="#hamburger-navigation">
-					<span class="sr-only">Navigation toggle</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-
-
-			<div class="collapse navbar-collapse" id="hamburger-navigation">
-					<ul class="nav navbar-nav navbar-custom" role="menu">
-						<li><a href="index.html" class="active">Home</a><span class="sr-only">Home</span></li>
-						<li><a href="about.html">O mnie</a></li>
-						<li><a href="contact.html">Kontakt</a></li>
-					</ul>
-			</div>
-		</div>
-
-		<div class="container language">
-		<a href="index_en.html">English version</a>
-		</div>
-	</nav>
-
-</div>
-
-<!-- treść -->
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-4 projekty">
-			<a href="pages/inz/inz.html"><img class="tile" src="img/inz.jpg"/></a>
-			<h3>Praca inżynierska</h3>
-			<p>Strona poświęcona mojej pracy inżynierskiej z zakresu odszumiania syganałów pomiarowych. Praca przygotowywana na Wydziale Elektrycznym Politechniki Warszawskiej.</p>
-		</div>
-
-		<div class="col-md-4 projekty">
-			<a href="portfolio.html"><img class="tile" src="img/portfolio.jpg"/></a>
-			<h3>Portfolio</h3>
-			<p>Zaprszam do obejrzenia moich prac.</p>
-		</div>
-
-		<div class="col-md-4 projekty">
-			<a href="http://poziomka.weebly.com/"><img class="tile" src="img/blog.jpg"/></a>
-			<h3>Poziomka mówi</h3>
-			<p>Blog poświęcony tematyce wystąpień publicznych, przemyśleniom i wprawkom literackim.</p>
-		</div>
-	</div>
-</div>
-
-<!--stopka -->
-
-<footer class="navbar navbar-inverse navbar-fixed-bottom" style="max-height: 110px">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4 col-md-push-8">
-				<div class="navbar-text navbar-right">
-					<a class="navbar-link" href="https://www.linkedin.com/in/agnieszka-ziomek-1980/"><img src="img/linkedin.png"/></a>
-					<a class="navbar-link" href="mailto: ziomeka@ee.pw.edu.pl"><img src="img/gmail.png"/></a>
-				</div>
-				<div class="navbar-header navbar-right">
-					<a href="index.html" class="navbar-brand">Agnieszka Ziomek</a>
-				</div>
-			</div>
-
-
-			<div class="col-md-8 col-md-pull-4 help">
-					<p class="navbar-text">Dzięki pomocy:</p>
-					<a class="navbar-link" href="https://www.edx.org/"><img src="img/edx.png" alt="edX logo"/></a>
-					<a class="navbar-link" href="https://www.codecademy.com/Ziomek_A"><img src="img/code.png" alt="codecademy logo"/></a>
-					<a class="navbar-link" href="http://getbootstrap.com/"><img src="img/bootstrap.png" alt="bootstrap logo"/></a>
-					<a class="navbar-link" href="https://www.digitalocean.com/"><img src="img/do.png" alt="digital ocean logo/"></a>
-					<a class="navbar-link" href="https://github.com/Ziomeka"><img src="img/github.png" alt="github logo"/></a>
-			</div>
-
-		</div>
-	</div>
-</footer>
-
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
