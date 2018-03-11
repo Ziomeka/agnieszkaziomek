@@ -1,6 +1,14 @@
-.dupa {
-  background-color: red;
-  &__wielka {
-    width: 100%;
-  }
+$teal: #004467;
+$basic-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body {
+  margin: 0 auto;
+  max-width: 1023px;
+  font-family: $basic-font;
+}
+
+a {
+  text-decoration: none;
+  color: $teal;
+  font-weight: 800;
 }
