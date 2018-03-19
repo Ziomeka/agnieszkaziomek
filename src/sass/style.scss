@@ -1,6 +1,8 @@
 $teal: #004467;
 $ivory: #fffff0;
+$gray: #777777;
 $basic-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 
 body {
   margin: 0;
@@ -57,5 +59,74 @@ a {
   &__links {
     color: $ivory;
     font-size: 1.5em;
+  }
+}
+
+.about {
+  max-width: 1023px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: flex-start;
+  padding: 1em 5%;
+  &__header {
+    width: 100%;
+    color: $teal;
+    text-align: center;
+    border-bottom: 1px solid $teal;
+  }
+  &__text {
+    width: 50%;
+    order: 2;
+  }
+  &__img {
+    order: 1;
+    width: 40%;
+    margin: 1em;
+  }
+  &__quote {
+    padding: 0.5em;
+    margin: 1em 0;
+    border-left: 5px solid $teal;
+    p {
+      margin: 0;
+    }
+    footer {
+      font-size: 80%;
+      color: $gray;
+    }
+  }
+  &__title {
+    color: $teal;
+    margin: 1em 0;
+  }
+  &__plan {
+    list-style: none;
+    padding: 0;
+    &--emphasis {
+      color: $teal;
+      font-weight: 800;
+    }
+  }
+  &__focus {
+    list-style: none;
+    padding: 0;
+    ::before {
+      content: "• ";
+      color: $teal;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    &__text {
+      width: 100%;
+      order: 1;
+    }
+    &__img {
+      width: 100%;
+    }
   }
 }
