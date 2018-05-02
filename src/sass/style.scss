@@ -163,26 +163,53 @@ a {
   }
   &__element {
     margin-top: 1em;
-    width: 45%;
-    &--img {
-      order: 1;
-    }
-    &--github {
-      order: 3;
-    }
-    &--page {
-      order: 4;
-    }
-    &--text {
-      order: 2;
+    width: 100%;
+    &--github, &--page {
+      text-align: center;
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .article {
     &__element {
-      width: 100%;
+      width: 45%;
+      &--img {
+        order: 1;
+      }
+      &--github {
+        order: 3;
+      }
+      &--page {
+        order: 4;
+      }
+      &--text {
+        order: 2;
       }
     }
   }
+}
+.cta-container {
+  max-width: 1023px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: flex-start;
+  padding: 1em 5%;
+}
+.cta {
+  color: white;
+  background-color: $teal;
+  border-radius: 10px;
+  padding: .5em 1em;
+  width: 50%;
+  margin-top: 1em;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .cta {
+    width: 25%;
+  }
+}
