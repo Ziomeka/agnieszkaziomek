@@ -77,12 +77,12 @@ a {
     border-bottom: 1px solid $teal;
   }
   &__text {
-    width: 50%;
+    width: 45%;
     order: 2;
   }
   &__img {
     order: 1;
-    width: 40%;
+    width: 45%;
     margin: 1em;
   }
   &__quote {
@@ -212,4 +212,22 @@ a {
   .cta {
     width: 25%;
   }
+}
+
+
+.contact {
+  max-width: 1023px;
+  margin: 0 auto;
+  text-align: center;
+  &__header {
+    width: 100%;
+    color: $teal;
+    text-align: center;
+    border-bottom: 1px solid $teal;
+  }
+  &__links {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+
 }
