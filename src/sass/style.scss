@@ -86,13 +86,13 @@ a {
   }
 
   &__text {
-    width: 45%;
-    order: 2;
+    width: 100%;
+    order: 1;
   }
 
   &__img {
-    order: 1;
-    width: 45%;
+    order: 2;
+    width: 100%;
     margin: 1em;
   }
 
@@ -136,21 +136,24 @@ a {
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .about {
     &__text {
-      width: 100%;
-      order: 1;
+      width: 45%;
+      order: 2;
     }
 
     &__img {
-      width: 100%;
+      width: 45%;
+      order: 1;
     }
   }
 }
 
 .projects {
   &__header {
+    max-width: 1023px;
+    margin: 0 auto;
     width: 100%;
     color: $teal;
     text-align: center;
