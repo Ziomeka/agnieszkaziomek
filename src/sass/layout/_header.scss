@@ -1,0 +1,52 @@
+.header {
+  background-color: $teal;
+  color: $ivory;
+
+  &__logo {
+    width: 100%;
+
+    &--first-name {
+      font-size: 1.5em;
+      line-height: 1em;
+      display: inline-block;
+    }
+
+    &--name {
+      font-size: 2.25em;
+      line-height: 1em;
+      display: inline-block;
+    }
+
+    &--slogan {
+      font-size: 1em;
+      line-height: 1em;
+      display: inline-block;
+    }
+  }
+
+
+  &__navigation {
+    width: 100%;
+  }
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+
+  &__links {
+    color: $ivory;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 769px) {
+  .header {
+    &__logo {
+      width: 45%;
+    }
+
+    &__navigation {
+      width: 45%;
+    }
+  }
+}
