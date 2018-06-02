@@ -1,0 +1,67 @@
+.projects {
+  &__header {
+    max-width: 1023px;
+    margin: 0 auto;
+    width: 100%;
+    color: $teal;
+    text-align: center;
+    border-bottom: 1px solid $teal;
+  }
+
+  &__article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1em 5%;
+  }
+}
+
+.article {
+  &__header {
+    width: 100%;
+    text-align: left;
+
+    &--title {
+      color: $teal;
+      margin-bottom: 0;
+    }
+
+    &--date {
+      font-size: 0.75em;
+    }
+  }
+
+  &__element {
+    margin-top: 1em;
+    width: 100%;
+
+    &--github,
+    &--page {
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .article {
+    &__element {
+      width: 45%;
+
+      &--img {
+        order: 1;
+      }
+
+      &--github {
+        order: 3;
+      }
+
+      &--page {
+        order: 4;
+      }
+
+      &--text {
+        order: 2;
+      }
+    }
+  }
+}

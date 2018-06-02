@@ -1,0 +1,13 @@
+.contact {
+  &__header {
+    width: 100%;
+    color: $teal;
+    text-align: center;
+    border-bottom: 1px solid $teal;
+  }
+
+  &__links {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+}
