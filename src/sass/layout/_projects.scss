@@ -30,10 +30,15 @@
     &--date {
       font-size: 0.75em;
     }
+
   }
 
   &__element {
     margin-top: 1em;
+    &--img,
+    &--text {
+      width: 100%;
+    }
     &--github,
     &--page {
       text-align: center;
