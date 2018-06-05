@@ -1,0 +1,9 @@
+.wraper {
+  max-width: 1023px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1em 5%;
+}
