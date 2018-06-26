@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var clean = require('gulp-clean');
 var runSeq = require('run-sequence');
 var browserSync = require('browser-sync').create();
+var sassLint = require('gulp-sass-lint');
 
 gulp.task('clean', function () {
   return gulp.src('build', {read: false})
@@ -22,8 +23,18 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('./build/img/'))]);
 });
 
+gulp.task('scss-lint', function () {
+  return gulp.src('src/sass/**/*.s+(a|c)ss')
+    .pipe(sassLint(
+      {
+        configFile: '.scss-lint.yml'
+      }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+});
+
 gulp.task('build', function(callback){
-  return runSeq('clean', ['styles', 'copy'],callback);
+  return runSeq('clean', 'scss-lint', ['styles', 'copy'],callback);
 });
 
 gulp.task('default', ['build'], function() {
