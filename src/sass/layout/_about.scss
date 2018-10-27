@@ -1,73 +1,73 @@
 .about {
-  &__header {
-    width: 100%;
-    color: $teal;
-    text-align: center;
-    border-bottom: 1px solid $teal;
-  }
-
-  &__text {
-    width: 100%;
-    order: 1;
-  }
-
-  &__img {
-    order: 2;
-    width: 100%;
-    margin: 1em;
-  }
-
-  &__quote {
-    padding: .5em;
-    margin: 1em 0;
-    border-left: 5px solid $teal;
-
-    p {
-      margin: 0;
+    &__header {
+        width: 100%;
+        color: $teal;
+        text-align: center;
+        border-bottom: 1px solid $teal;
     }
 
-    footer {
-      font-size: 80%;
-      color: $gray;
-    }
-  }
-
-  &__title {
-    color: $teal;
-    margin: 1em 0;
-  }
-
-  &__plan {
-    list-style: none;
-    padding: 0;
-
-    &--emphasis {
-      color: $teal;
-      font-weight: 800;
-    }
-  }
-
-  &__focus {
-    list-style: none;
-    padding: 0;
-
-    ::before {
-      content: '•';
-      color: $teal;
-      margin-right: .5rem;
-    }
-  }
-}
-@media screen and (min-width: 769px) {
-  .about {
     &__text {
-      width: 45%;
-      order: 2;
+        width: 100%;
+        order: 1;
     }
 
     &__img {
-      width: 45%;
-      order: 1;
+        order: 2;
+        width: 100%;
+        margin: 1em;
     }
-  }
+
+    &__quote {
+        padding: .5em;
+        margin: 1em 0;
+        border-left: 5px solid $teal;
+
+        p {
+            margin: 0;
+        }
+
+        footer {
+            font-size: 80%;
+            color: $gray;
+        }
+    }
+
+    &__title {
+        color: $teal;
+        margin: 1em 0;
+    }
+
+    &__plan {
+        list-style: none;
+        padding: 0;
+
+        &--emphasis {
+            color: $teal;
+            font-weight: 800;
+        }
+    }
+
+    &__focus {
+        list-style: none;
+        padding: 0;
+
+        ::before {
+            content: '•';
+            color: $teal;
+            margin-right: .5rem;
+        }
+    }
+}
+@media screen and (min-width: 769px) {
+    .about {
+        &__text {
+            width: 45%;
+            order: 2;
+        }
+
+        &__img {
+            width: 45%;
+            order: 1;
+        }
+    }
 }

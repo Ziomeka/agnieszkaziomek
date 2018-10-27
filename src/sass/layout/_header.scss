@@ -1,55 +1,55 @@
 .header {
-  background-color: $teal;
-  color: $ivory;
+    background-color: $teal;
+    color: $ivory;
 
-  &__logo {
-    width: 100%;
-    margin: 1rem;
+    &__logo {
+        width: 100%;
+        margin: 1rem;
 
-    &--first-name {
-      font-size: 1.5em;
-      line-height: 1em;
-      display: inline-block;
+        &--first-name {
+            font-size: 1.5em;
+            line-height: 1em;
+            display: inline-block;
 
+        }
+
+        &--name {
+            font-size: 2.25em;
+            line-height: 1em;
+            display: inline-block;
+        }
+
+        &--slogan {
+            font-size: 1em;
+            line-height: 1em;
+            display: inline-block;
+        }
     }
 
-    &--name {
-      font-size: 2.25em;
-      line-height: 1em;
-      display: inline-block;
+
+    &__navigation {
+        width: 100%;
+        margin: 1rem;
     }
-
-    &--slogan {
-      font-size: 1em;
-      line-height: 1em;
-      display: inline-block;
-    }
-  }
-
-
-  &__navigation {
-    width: 100%;
-    margin: 1rem;
-  }
 }
 
 .navigation {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 
-  &__links {
-    color: $ivory;
-    font-size: 1.5em;
-  }
+    &__links {
+        color: $ivory;
+        font-size: 1.5em;
+    }
 }
 @media screen and (min-width: 769px) {
-  .header {
-    &__logo {
-      width: 45%;
-    }
+    .header {
+        &__logo {
+            width: 45%;
+        }
 
-    &__navigation {
-      width: 45%;
+        &__navigation {
+            width: 45%;
+        }
     }
-  }
 }

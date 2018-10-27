@@ -1,81 +1,81 @@
 .projects {
-  &__header {
-    max-width: 1023px;
-    margin: 0 auto;
-    width: 100%;
-    color: $teal;
-    text-align: center;
-    border-bottom: 1px solid $teal;
-  }
+    &__header {
+        max-width: 1023px;
+        margin: 0 auto;
+        width: 100%;
+        color: $teal;
+        text-align: center;
+        border-bottom: 1px solid $teal;
+    }
 
-  &__article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 1em 5%;
-  }
+    &__article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 1em 5%;
+    }
 }
 
 .article {
-  &__header {
-    width: 100%;
-    text-align: left;
+    &__header {
+        width: 100%;
+        text-align: left;
 
-    &--title {
-      color: $teal;
-      margin-bottom: 0;
-    }
+        &--title {
+            color: $teal;
+            margin-bottom: 0;
+        }
 
-    &--date {
-      font-size: .75em;
-    }
-
-  }
-
-  &__element {
-    margin-top: 1em;
-
-    &--img,
-    &--text {
-      width: 100%;
-    }
-
-    &--github,
-    &--page {
-      text-align: center;
-      border-top: 1px solid $teal;
-      border-left: 1px solid $teal;
-      border-bottom: 2px solid $teal;
-      border-right: 2px solid $teal;
-      border-radius: 1em;
-      display: inline-block;
-      padding: 1em;
+        &--date {
+            font-size: .75em;
+        }
 
     }
-  }
+
+    &__element {
+        margin-top: 1em;
+
+        &--img,
+        &--text {
+            width: 100%;
+        }
+
+        &--github,
+        &--page {
+            text-align: center;
+            border-top: 1px solid $teal;
+            border-left: 1px solid $teal;
+            border-bottom: 2px solid $teal;
+            border-right: 2px solid $teal;
+            border-radius: 1em;
+            display: inline-block;
+            padding: 1em;
+
+        }
+    }
 }
 @media screen and (min-width: 769px) {
-  .article {
-    &__element {
+    .article {
+        &__element {
 
-      &--img {
-        order: 1;
-        width: 45%;
-      }
+            &--img {
+                order: 1;
+                width: 45%;
+            }
 
-      &--github {
-        order: 3;
-      }
+            &--github {
+                order: 3;
+            }
 
-      &--page {
-        order: 4;
-      }
+            &--page {
+                order: 4;
+            }
 
-      &--text {
-        width: 45%;
-        order: 2;
-      }
+            &--text {
+                width: 45%;
+                order: 2;
+            }
+        }
     }
-  }
 }
