@@ -23,18 +23,18 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('./build/img/'))]);
 });
 
-gulp.task('scss-lint', function () {
+gulp.task('sass-lint', function () {
   return gulp.src('src/sass/**/*.s+(a|c)ss')
     .pipe(sassLint(
       {
-        configFile: '.scss-lint.yml'
+        configFile: '.sass-lint.yml'
       }))
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
 });
 
 gulp.task('build', function(callback){
-  return runSeq('clean', 'scss-lint', ['styles', 'copy'],callback);
+  return runSeq('clean', 'sass-lint', ['styles', 'copy'],callback);
 });
 
 gulp.task('default', ['build'], function() {
@@ -42,7 +42,7 @@ gulp.task('default', ['build'], function() {
     browserSync.init({
         server: "./build"
     });
-    gulp.watch('src/sass/**/*.scss',['styles']);
+    gulp.watch('src/sass/**/*.scss',['sass-lint', 'styles']);
     gulp.watch('src/**/*.html',['copy']);
     gulp.watch(["build/*.html", "build/**/*.css"]).on('change', browserSync.reload);
 });
