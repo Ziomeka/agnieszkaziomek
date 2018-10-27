@@ -1,15 +1,15 @@
 .contact {
-  &__header {
-    width: 100%;
-    color: $teal;
-    text-align: center;
-    border-bottom: 1px solid $teal;
-  }
+    &__header {
+        width: 100%;
+        color: $teal;
+        text-align: center;
+        border-bottom: 1px solid $teal;
+    }
 
-  &__links {
-    display: inline-block;
-    margin-top: 1em;
-    width: 100%;
-    text-align: center;
-  }
+    &__links {
+        display: inline-block;
+        margin-top: 1em;
+        width: 100%;
+        text-align: center;
+    }
 }
