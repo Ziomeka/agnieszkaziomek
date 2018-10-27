@@ -1,0 +1,16 @@
+{
+    "env": {
+        "es6": true
+    },
+    "rules": {
+        "comma-dangle": ["error", "always-multiline"],
+        "curly": 2,
+        "no-unused-vars": 2,
+        "prefer-const": 2,
+        "comma-spacing": [2, { "before": false, "after": true }],
+        "indent": [2, 4],
+        "no-inline-comments": 2,
+        "no-multiple-empty-lines": 2,
+        "no-trailing-spaces": 2
+    }
+}

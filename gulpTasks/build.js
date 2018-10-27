@@ -8,6 +8,6 @@ require('./babel')();
 
 module.exports = function () {
     gulp.task('build', function(callback){
-        return runSeq('clean', 'sass-lint', ['styles', 'copy', 'babel'],callback);
+        return runSeq('clean', 'sass-lint', ['styles', 'copy', 'babel'], callback);
     });
 }
