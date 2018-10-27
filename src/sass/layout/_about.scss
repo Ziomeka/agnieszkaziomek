@@ -18,7 +18,7 @@
   }
 
   &__quote {
-    padding: 0.5em;
+    padding: .5em;
     margin: 1em 0;
     border-left: 5px solid $teal;
 
@@ -52,8 +52,9 @@
     padding: 0;
 
     ::before {
-      content: "• ";
+      content: '•';
       color: $teal;
+      margin-right: .5rem;
     }
   }
 }
