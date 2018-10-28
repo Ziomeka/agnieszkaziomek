@@ -1,7 +1,6 @@
 .about {
     &__header {
         width: 100%;
-        color: $primary-color;
         text-align: center;
         border-bottom: 1px solid $primary-color;
     }
@@ -33,7 +32,6 @@
     }
 
     &__title {
-        color: $primary-color;
         margin: 1rem 0;
     }
 
