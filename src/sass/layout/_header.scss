@@ -1,28 +1,5 @@
 .header {
     background-color: $primary-color;
-    color: $white-ivory;
-
-    &__logo {
-        width: 100%;
-        margin: 1.6rem;
-
-        &--first-name {
-            font-size: 3.2rem;
-            display: inline-block;
-
-        }
-
-        &--name {
-            font-size: 3.6rem;
-            display: inline-block;
-        }
-
-        &--slogan {
-            font-size: 1.6rem;
-            display: inline-block;
-        }
-    }
-
 
     &__navigation {
         width: 100%;
