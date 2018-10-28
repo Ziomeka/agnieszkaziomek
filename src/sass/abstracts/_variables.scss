@@ -1,3 +1,5 @@
+$desktop-width: 800px;
+
 $white: #fff;
 $white-ivory: #fffff0;
 $blue-teal: #004467;
@@ -11,4 +13,6 @@ $roboto: 'Roboto', sans-serif;
 $roboto-thin: 'Roboto', sans-serif;
 
 $primary-color: $green-fern;
+$primary-color-tint: lighten($primary-color, 3%);
+$secondary-color: $red-crimson;
 $primary-font: $roboto;
