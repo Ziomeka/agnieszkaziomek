@@ -25,9 +25,14 @@ $height-desktop: 8rem;
             width: auto;
             border: 0;
         }
+
         display: inline-block;
         width: 100%;
         border-top: .1rem solid $secondary-color-dark;
+
+        &:first-child {
+            margin-top: 1rem;
+        }
     }
 
     &__link {
@@ -87,7 +92,7 @@ $height-desktop: 8rem;
         }
 
         #{$root}__menu {
-            height: 19.5rem;
+            height: 20.5rem;
         }
     }
 }
