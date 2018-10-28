@@ -1,0 +1,42 @@
+.navigation {
+    @include desktop {
+        flex-direction: row;
+        height: 8rem;
+        align-items: flex-end;
+    }
+    background-color: $primary-color;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &__item {
+        @include desktop {
+            width: auto;
+            border: 0;
+        }
+        display: inline-block;
+        width: 100%;
+        border-top: .1rem solid $primary-color-tint;
+    }
+
+    &__links {
+        @include desktop {
+            padding: .5rem 1rem;
+        }
+        padding: .5rem 4.5rem;
+        font-size: 2.4rem;
+        font-weight: 300;
+        color: $white-ivory;
+        display: inline-block;
+        width: 100%;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
