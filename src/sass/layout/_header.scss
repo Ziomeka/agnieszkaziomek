@@ -1,11 +1,12 @@
 .header {
-    @include desktop {
-        position: fixed;
-        width: 100%;
-    }
+    position: fixed;
+    width: 100%;
     background-color: $primary-color;
 
     &__container {
+        @include xs {
+            padding: .5rem 1.5rem;
+        }
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -33,9 +34,7 @@
 
 .header-wrapper {
     &__fix {
-        @include desktop {
-            height: 9rem;
-        }
+        height: 9rem;
     }
 }
 

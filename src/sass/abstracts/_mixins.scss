@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin xs {
+    @media (max-width: #{$xs-width}) {
+        @content;
+    }
+}
