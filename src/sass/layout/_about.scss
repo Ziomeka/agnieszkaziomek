@@ -1,9 +1,9 @@
 .about {
     &__header {
         width: 100%;
-        color: $teal;
+        color: $primary-color;
         text-align: center;
-        border-bottom: 1px solid $teal;
+        border-bottom: 1px solid $primary-color;
     }
 
     &__text {
@@ -20,7 +20,7 @@
     &__quote {
         padding: .5em;
         margin: 1em 0;
-        border-left: 5px solid $teal;
+        border-left: 5px solid $primary-color;
 
         p {
             margin: 0;
@@ -28,12 +28,12 @@
 
         footer {
             font-size: 80%;
-            color: $gray;
+            color: $grey-steel;
         }
     }
 
     &__title {
-        color: $teal;
+        color: $primary-color;
         margin: 1em 0;
     }
 
@@ -42,7 +42,7 @@
         padding: 0;
 
         &--emphasis {
-            color: $teal;
+            color: $primary-color;
             font-weight: 800;
         }
     }
@@ -53,7 +53,7 @@
 
         ::before {
             content: '•';
-            color: $teal;
+            color: $primary-color;
             margin-right: .5rem;
         }
     }
