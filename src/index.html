@@ -2,120 +2,224 @@
 <html>
 
 <head>
-	<title>Agnieszka Ziomek</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<link href="css/main.css" rel="stylesheet" />
+    <title>Agnieszka Ziomek</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 
 <body>
-	<header class="header">
-		<div class="wraper">
-		<h1 class="header__logo">
-					<span class="header__logo--first-name">AGNIESZKA</span><br>
-					<span class="header__logo--name">ZIOMEK</span>
-					<span class="header__logo--slogan">front-end developer in&nbsp;the&nbsp;making</span>
-			</h1>
-		<nav class="header__navigation">
-			<ul class="navigation">
-				<li><a class="navigation__links" href="#projects">Portfolio</a></li>
-				<li><a class="navigation__links" href="#contact">Kontakt</a></li>
-				<!-- <li><a class="navigation__links" href="#">English version</a></li> -->
-			</ul>
-		</nav>
-	</div>
-	</header>
-	<main>
-		<section class="about wraper">
-			<header class="about__header">
-				<h2>O mnie</h2>
-			</header>
-			<div class="about__text">
-				<h3 class="about__title">Mój cel:</h3>
-				<p>Front-end developer profesjonalista.</p>
-				<h3 class="about__title">Mój plan:</h3>
-				<ol class="about__plan">
-					<li><span class="about__plan--emphasis">Etap 1</span> - content developer w <a href="http://www.nowaera.pl/" target="_blank">Nowa Era</a>, poznaję proces developerski, zasady komunikacji z biznesem, narzędzia pracy oraz nie ustaję w edukacji. Pracuję przy budowie mutimedialnych podręczników oraz
-						przygotowuje mailingi html.</li>
-					<li><span class="about__plan--emphasis">Etap 2</span> - awans na stanowisko junior front-end developera - in progress, ostatnio zakończyłam pierwszy projekt front-endowy.</li>
-					<li><span class="about__plan--emphasis">Etap 3</span> - ...</li>
-				</ol>
-				<h3 class="about__title">Zagadnienia na których skupia się obecnie moja edukacja to:</h3>
-				<ul class="about__focus">
-					<li>semantyczny HTML</li>
-					<li>uporządkowany CSS (BEM, 7in1)</li>
-					<li>Vanilla JS, podstawy architektury oprogramowania</li>
-					<li>dobre nawyki, czysty kod</li>
-				</ul>
-				<blockquote class="about__quote">
-					<p>Do or do not, there is no try</p>
-					<footer>&ndash;Mistrz Yoda</footer>
-				</blockquote>
-			</div>
-			<img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
-		</section>
+    <div class=header-wrapper>
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo logo">
+                    Ziomek
+                </div>
+                <nav class="header__navigation navigation js-menu">
+                    <button class="navigation__btn navigation__btn--open js-expand">o</button>
+                    <button class="navigation__btn navigation__btn--close js-expand">x</button>
+                    <ul class="navigation__menu">
+                        <li class="navigation__item">
+                            <a class="navigation__link js-link" href="#about" data-target="#about">O&nbsp;mnie</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="https://github.com/Ziomeka" target="_blank">Github</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="https://codepen.io/Poziomka/" target="_blank">Codepen</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link js-link" href="#projects" data-target="#projects">Portfolio</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link js-link" href="#contact" data-target="#contact">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class=header-wrapper__fix>
 
-		<section class="projects" id="projects">
-			<header class="projects__header">
-				<h2>Moje projekty</h2>
-			</header>
-			<article class="projects__article wraper">
-				<header class="article__header">
-					<h3 class="article__header--title">Wykresy z wykorzystaniem canvas</h3>
-					<time class="article__header--date" datetime="2017-12-11">Grudzień 2017</time>
-				</header>
-				<p class="article__element article__element--text">Na fali popularności <a href="https://www.cryptokitties.co/" target="_blank">cryptokitties</a> zbudowałam stronę pozwalającą przeglądać statystyki popularnosci cech u tych niezywkłych stworzeń na próbce losowej pobranej danego dnia. Moim celem było
-					wstępne zapoznanie się z elementem canvas.</p>
-				<a class="article__element article__element--github" href="https://github.com/Ziomeka/purristics" target="_blank">Zobacz Github</a>
-				<a class="article__element article__element--page" href="http://purristics.com/stats/0002.html" target="_blank">Zobacz stronę</a>
-				<img class="article__element article__element--img" src="img/projects_canvas.jpg" alt="Miniaturka widoku strony">
-			</article>
+        </div>
+    </div>
+    <main>
+        <section class="container">
+            <h1>Agnieszka Ziomek, front&#8209;end&nbsp;developer</h1>
+            <p>W drodze od juniora do profesjonalisty.</p>
+        </section>
+        <section class="projects" id="projects">
+            <header class="projects__header">
+                <h2>Moje projekty</h2>
+            </header>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Strona domowa</h3>
+                    <span class="article__header--date">Bieżący</span>
+                </header>
+                <p class="article__element article__element--text">Strona, na której właśnie się znajdujesz, stanowi
+                    moją piaskownicę.
+                    Przebudowując ją ćwiczę zagadnienia, na których aktualnie skupia się moja edukacja. Projekt buduję
+                    z użyciem Gulp, stosuję lintery.
+                    Staram się kodować z poszanowaniem dobrych praktyk (Architektura 7 in 1, BEM) oraz semantyki html.</p>
+                <a class="article__element article__element--github" href="https://github.com/Ziomeka/agnieszkaziomek"
+                    target="_blank">Zobacz Github</a>
+                <img class="article__element article__element--img" src="img/projects_home.jpg" alt="Miniaturka widoku strony">
+            </article>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Wykresy z wykorzystaniem canvas</h3>
+                    <time class="article__header--date" datetime="2017-12-11">Grudzień 2017</time>
+                </header>
+                <p class="article__element article__element--text">Na fali popularności <a href="https://www.cryptokitties.co/"
+                        target="_blank">cryptokitties</a> zbudowałam stronę pozwalającą przeglądać statystyki
+                    popularnosci cech u tych niezywkłych stworzeń na próbce losowej pobranej danego dnia. Moim celem
+                    było
+                    wstępne zapoznanie się z elementem canvas.</p>
+                <a class="article__element article__element--github" href="https://github.com/Ziomeka/purristics"
+                    target="_blank">Zobacz Github</a>
+                <a class="article__element article__element--page" href="http://purristics.com/stats/0002.html" target="_blank">Zobacz
+                    stronę</a>
+                <img class="article__element article__element--img" src="img/projects_canvas.jpg" alt="Miniaturka widoku strony">
+            </article>
 
-			<article class="projects__article wraper">
-				<header class="article__header">
-					<h3 class="article__header--title">Autokolelacja</h3>
-					<time class="article__header--date" datetime="2017-10-15">Listopad 2017</time>
-				</header>
-				<p class="article__element article__element--text">Proste narzędzie do wykrywania autokorelacji sygnału. W aplikacji wykorzystałam takie rozwiązania jak service worker i synchroniczne wczytywanie plików. Użyłam biblioteki do tworzenia wykresów - jqplot, natomiast potrzebne algorytmy statystyczne zaimplementowałam
-					samodzielnie.
-				</p>
-				<a class="article__element article__element--github" href="https://github.com/Ziomeka/Autocorrelation" target="_blank">Zobacz Github</a>
-				<a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/inz/inz.html" target="_blank">Zobacz stronę</a>
-				<img class="article__element article__element--img" src="img/projects_autocorrelation.jpg" alt="Miniaturka widoku strony">
-			</article>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Autokolelacja</h3>
+                    <time class="article__header--date" datetime="2017-10-15">Listopad 2017</time>
+                </header>
+                <p class="article__element article__element--text">Proste narzędzie do wykrywania autokorelacji
+                    sygnału. W aplikacji wykorzystałam takie rozwiązania jak service worker i synchroniczne wczytywanie
+                    plików. Użyłam biblioteki do tworzenia wykresów - jqplot, natomiast potrzebne algorytmy
+                    statystyczne zaimplementowałam
+                    samodzielnie.
+                </p>
+                <a class="article__element article__element--github" href="https://github.com/Ziomeka/Autocorrelation"
+                    target="_blank">Zobacz Github</a>
+                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/inz/inz.html"
+                    target="_blank">Zobacz stronę</a>
+                <img class="article__element article__element--img" src="img/projects_autocorrelation.jpg" alt="Miniaturka widoku strony">
+            </article>
 
-			<article class="projects__article wraper">
-				<header class="article__header">
-					<h3 class="article__header--title">Generator html</h3>
-					<time class="article__header--date" datetime="2017-09-20">Wrzesień 2017</time>
-				</header>
-				<p class="article__element article__element--text">Jeden z projektów do których planuję powrócić, po odpowiednim zgłębieniu zagadnień architektury aplikacji. W trakcie tworzenia był dla mnie ćwiczeniem w odejściu od jquery na rzecz vanilla js.</p>
-				<a class="article__element article__element--page" href="https://codepen.io/Poziomka/pen/MEeqpE" target="_blank">Zobacz codepen</a>
-				<img class="article__element article__element--img" src="img/projects_html-generator.jpg" alt="Miniaturka widoku strony">
-			</article>
-			<div class="cta-container wraper">
-			<a class="cta" href="projects.html" target="_blank">Zobacz więcej prac</a>
-			<a class="cta" href="https://github.com/Ziomeka" target="_blank">Mój github</a>
-			<a class="cta" href="https://codepen.io/Poziomka/" target="_blank">Mój codePen</a>
-		</div>
-		</section>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Generator html</h3>
+                    <time class="article__header--date" datetime="2017-09-20">Wrzesień 2017</time>
+                </header>
+                <p class="article__element article__element--text">Jeden z projektów do których planuję powrócić, po
+                    odpowiednim zgłębieniu zagadnień architektury aplikacji. W trakcie tworzenia był dla mnie
+                    ćwiczeniem w odejściu od jquery na rzecz vanilla js.</p>
+                <a class="article__element article__element--page" href="https://codepen.io/Poziomka/pen/MEeqpE" target="_blank">Zobacz
+                    codepen</a>
+                <img class="article__element article__element--img" src="img/projects_html-generator.jpg" alt="Miniaturka widoku strony">
+            </article>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Symulator windy</h3>
+                    <time class="article__header--date" datetime="2017-06-02">Czerwiec 2017</time>
+                </header>
+                <p class="article__element article__element--text">Prosty symulator windy, który stworzyłam w ramach
+                    projektu na zajeciach na uczelni z wykorzystaniem jQuery</p>
+                <a class="article__element article__element--github" href="https://github.com/Ziomeka/ElevatorSymulator"
+                    target="_blank">Zobacz Github</a>
+                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/winda/index.html"
+                    target="_blank">Zobacz stronę</a>
+                <img class="article__element article__element--img" src="img/projects_lift.jpg" alt="Miniaturka widoku strony">
+            </article>
 
-		<section class="contact wraper" id="contact">
-			<header class="contact__header">
-				<h2>Kontakt</h2>
-			</header>
-			<br>
-			<a class="contact__links" href="tel:+48605248484">tel: +48 605 24 84 84</a>
-			<br>
-			<a class="contact__links" href="mailto: poziomkaa@gmail.com">e-mail: poziomkaa@gmail.com</a>
-			<br>
-			<a class="contact__links" href="https://www.linkedin.com/in/agnieszka-ziomek-1980/" target="_blank"> LinkedIn</a>
-			<br>
-			<a class="contact__links" href="https://poziomka.weebly.com/" target="_blank">Blog</a>
-		</section>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Converter</h3>
+                    <time class="article__header--date" datetime="2017-05-04">Maj 2017</time>
+                </header>
+                <p class="article__element article__element--text">Bardzo prosty konwerter walut wykonany jako zadanie
+                    rekrutacyjne</p>
+                <a class="article__element article__element--github" href="https://github.com/Ziomeka/ExchangeConverter"
+                    target="_blank">Zobacz Github</a>
+                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/converter/index.html"
+                    target="_blank">Zobacz stronę</a>
+                <img class="article__element article__element--img" src="img/projects_converter.jpg" alt="Miniaturka widoku strony">
+            </article>
 
-	</main>
+            <article class="projects__article wraper">
+                <header class="article__header">
+                    <h3 class="article__header--title">Rating menu</h3>
+                    <time class="article__header--date" datetime="2017-05-02">Maj 2017</time>
+                </header>
+                <p class="article__element article__element--text">Zadanie z kursu jQuery, proste menu do oceniania
+                    przez kliknięcie w symbol i możliwością zmiany skali oceny</p>
+                <a class="article__element article__element--github" href="https://github.com/Ziomeka/RatingMenu"
+                    target="_blank">Zobacz Github</a>
+                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/rate/index.html"
+                    target="_blank">Zobacz stronę</a>
+                <img class="article__element article__element--img" src="img/projects_rate.jpg" alt="Miniaturka widoku strony">
+            </article>
+            <div class="cta-container wraper">
+                <a class="cta" href="projects.html" target="_blank">Zobacz więcej prac</a>
+                <a class="cta" href="https://github.com/Ziomeka" target="_blank">Mój github</a>
+                <a class="cta" href="https://codepen.io/Poziomka/" target="_blank">Mój codePen</a>
+            </div>
+        </section>
+        <section class="about wraper" id="about">
+            <header class="about__header">
+                <h2>O mnie</h2>
+            </header>
+            <div class="about__text">
+                <h3 class="about__title">Mój cel:</h3>
+                <p>Zostać Front-end developerem profesjonalistą.</p>
+                <h3 class="about__title">Mój plan:</h3>
+                <ol class="about__plan">
+                    <li><span class="about__plan--emphasis">Etap 1 (ukończony)</span> - content developer w <a href="http://www.nowaera.pl/"
+                            target="_blank">Nowa Era</a>, zapoznałam się procesem developerskim, zasadami komunikacji z
+                        biznesem,
+                        narzędziami pracy. Pracowałam przy przygotowaniu mutimedialnych podręczników oraz mailingów
+                        html.</li>
+                    <li><span class="about__plan--emphasis">Etap 2 (obecnie)</span> - od czerwca 2018 stanowisko junior
+                        front-end
+                        developera w <a href="http://www.nowaera.pl/" target="_blank">Nowa Era</a>. Pracuję przy dużych
+                        portalach
+                        z materiałami edukacyjnymi dla licealistów pod nadzorem doświadczonego mentora. Moje zadania
+                        polegają na
+                        przygotowaniu statycznych widoków, prostych funkcji vanilla js lub componentów vue z
+                        uwzględnieniem testów.</li>
+                    <li><span class="about__plan--emphasis">Etap 3 (planowany)</span> - Zapoznanie się ze specyfiką
+                        pracy dla klienta
+                        zewnętrznego w metodzie agile oraz jednym z popularnych frameworków. </li>
+                    <li><span class="about__plan--emphasis">Etap 4 </span> - ? </li>
+                </ol>
+                <h3 class="about__title">Zagadnienia na których skupia się obecnie moja edukacja to:</h3>
+                <ul class="about__focus">
+                    <li>dobre nawyki, czysty kod</li>
+                    <li>semantyczny HTML</li>
+                    <li>uporządkowany CSS (BEM, 7in1)</li>
+                    <li>Vanilla JS, podstawy architektury oprogramowania</li>
+                    <li>jest (unit tests, TDD)</li>
+                </ul>
+                <blockquote class="about__quote">
+                    <p>Do or do not, there is no try</p>
+                    <footer>&ndash;Mistrz Yoda</footer>
+                </blockquote>
+            </div>
+            <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
+        </section>
+
+        <section class="contact wraper" id="contact">
+            <header class="contact__header">
+                <h2>Kontakt</h2>
+            </header>
+            <br>
+            <a class="contact__links" href="tel:+48605248484">tel: +48 605 24 84 84</a>
+            <br>
+            <a class="contact__links" href="mailto: poziomkaa@gmail.com">e-mail: poziomkaa@gmail.com</a>
+            <br>
+            <a class="contact__links" href="https://www.linkedin.com/in/agnieszka-ziomek-1980/" target="_blank">
+                LinkedIn</a>
+            <br>
+            <a class="contact__links" href="https://poziomka.weebly.com/" target="_blank">Blog</a>
+        </section>
+
+    </main>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

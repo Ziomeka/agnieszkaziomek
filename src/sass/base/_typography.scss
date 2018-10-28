@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:Light');
+@import url('https://fonts.googleapis.com/css?family=Roboto:Thin');
+
+body {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 800;
+}
+
+h1,
+h2,
+h3 {
+    color: $primary-color;
+}
