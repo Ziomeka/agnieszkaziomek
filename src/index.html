@@ -20,11 +20,21 @@
                     <button class="navigation__btn navigation__btn--open js-expand">o</button>
                     <button class="navigation__btn navigation__btn--close js-expand">x</button>
                     <ul class="navigation__menu">
-                        <li class="navigation__item"><a class="navigation__link js-link" href="#about" data-target="#about">O&nbsp;mnie</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="https://github.com/Ziomeka" target="_blank">Github</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="https://codepen.io/Poziomka/" target="_blank">Codepen</a></li>
-                        <li class="navigation__item"><a class="navigation__link js-link" href="#projects" data-target="#projects">Portfolio</a></li>
-                        <li class="navigation__item"><a class="navigation__link js-link" href="#contact" data-target="#contact">Kontakt</a></li>
+                        <li class="navigation__item">
+                            <a class="navigation__link js-link" href="#about" data-target="#about">O&nbsp;mnie</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="https://github.com/Ziomeka" target="_blank">Github</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="https://codepen.io/Poziomka/" target="_blank">Codepen</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link js-link" href="#projects" data-target="#projects">Portfolio</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link js-link" href="#contact" data-target="#contact">Kontakt</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -34,39 +44,6 @@
         </div>
     </div>
     <main>
-        <section class="about wraper" id="about">
-            <header class="about__header">
-                <h2>O mnie</h2>
-            </header>
-            <div class="about__text">
-                <h3 class="about__title">Mój cel:</h3>
-                <p>Front-end developer profesjonalista.</p>
-                <h3 class="about__title">Mój plan:</h3>
-                <ol class="about__plan">
-                    <li><span class="about__plan--emphasis">Etap 1</span> - content developer w <a href="http://www.nowaera.pl/"
-                            target="_blank">Nowa Era</a>, poznaję proces developerski, zasady komunikacji z biznesem,
-                        narzędzia pracy oraz nie ustaję w edukacji. Pracuję przy budowie mutimedialnych podręczników
-                        oraz
-                        przygotowuje mailingi html.</li>
-                    <li><span class="about__plan--emphasis">Etap 2</span> - awans na stanowisko junior front-end
-                        developera - in progress, ostatnio zakończyłam pierwszy projekt front-endowy.</li>
-                    <li><span class="about__plan--emphasis">Etap 3</span> - ...</li>
-                </ol>
-                <h3 class="about__title">Zagadnienia na których skupia się obecnie moja edukacja to:</h3>
-                <ul class="about__focus">
-                    <li>semantyczny HTML</li>
-                    <li>uporządkowany CSS (BEM, 7in1)</li>
-                    <li>Vanilla JS, podstawy architektury oprogramowania</li>
-                    <li>dobre nawyki, czysty kod</li>
-                </ul>
-                <blockquote class="about__quote">
-                    <p>Do or do not, there is no try</p>
-                    <footer>&ndash;Mistrz Yoda</footer>
-                </blockquote>
-            </div>
-            <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
-        </section>
-
         <section class="projects" id="projects">
             <header class="projects__header">
                 <h2>Moje projekty</h2>
@@ -123,6 +100,38 @@
                 <a class="cta" href="https://github.com/Ziomeka" target="_blank">Mój github</a>
                 <a class="cta" href="https://codepen.io/Poziomka/" target="_blank">Mój codePen</a>
             </div>
+        </section>
+        <section class="about wraper" id="about">
+            <header class="about__header">
+                <h2>O mnie</h2>
+            </header>
+            <div class="about__text">
+                <h3 class="about__title">Mój cel:</h3>
+                <p>Front-end developer profesjonalista.</p>
+                <h3 class="about__title">Mój plan:</h3>
+                <ol class="about__plan">
+                    <li><span class="about__plan--emphasis">Etap 1</span> - content developer w <a href="http://www.nowaera.pl/"
+                            target="_blank">Nowa Era</a>, poznaję proces developerski, zasady komunikacji z biznesem,
+                        narzędzia pracy oraz nie ustaję w edukacji. Pracuję przy budowie mutimedialnych podręczników
+                        oraz
+                        przygotowuje mailingi html.</li>
+                    <li><span class="about__plan--emphasis">Etap 2</span> - awans na stanowisko junior front-end
+                        developera - in progress, ostatnio zakończyłam pierwszy projekt front-endowy.</li>
+                    <li><span class="about__plan--emphasis">Etap 3</span> - ...</li>
+                </ol>
+                <h3 class="about__title">Zagadnienia na których skupia się obecnie moja edukacja to:</h3>
+                <ul class="about__focus">
+                    <li>semantyczny HTML</li>
+                    <li>uporządkowany CSS (BEM, 7in1)</li>
+                    <li>Vanilla JS, podstawy architektury oprogramowania</li>
+                    <li>dobre nawyki, czysty kod</li>
+                </ul>
+                <blockquote class="about__quote">
+                    <p>Do or do not, there is no try</p>
+                    <footer>&ndash;Mistrz Yoda</footer>
+                </blockquote>
+            </div>
+            <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
         </section>
 
         <section class="contact wraper" id="contact">
