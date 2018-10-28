@@ -8,13 +8,16 @@ $height-desktop: 8rem;
             flex-direction: row;
             align-items: flex-end;
             height: $height-desktop;
-            display: flex;
+            max-height: none;
         }
         background-color: $primary-color;
-        display: none;
+        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: height 1s;
     }
 
     &__item {
@@ -83,7 +86,7 @@ $height-desktop: 8rem;
         }
 
         #{$root}__menu {
-            display: flex;
+            height: 19.5rem;
         }
     }
 }
