@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: $primary-font;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 800;
+}
