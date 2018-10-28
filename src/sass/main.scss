@@ -1,12 +1,15 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 @import 'base/normalize';
 @import 'base/typography';
 
 @import 'layout/grid';
 @import 'layout/header';
+@import 'layout/navigation';
 @import 'layout/about';
 @import 'layout/projects';
 @import 'layout/contact';
 
 @import 'components/cta';
+@import 'components/logo';

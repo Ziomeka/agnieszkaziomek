@@ -1,0 +1,11 @@
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: #{$xs-width}) {
+        @content;
+    }
+}

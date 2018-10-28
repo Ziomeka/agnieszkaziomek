@@ -14,5 +14,5 @@ gulp.task('default', ['build'], function() {
     gulp.watch('src/sass/**/*.scss', ['styles']);
     gulp.watch('src/**/*.js', ['babel']);
     gulp.watch('src/**/*.html', ['copy']);
-    gulp.watch(['build/*.html', 'build/**/*.css']).on('change', browserSync.reload);
+    gulp.watch(['build/*.html', 'build/**/*.css', 'build/**/*.js']).on('change', browserSync.reload);
 });

@@ -1,14 +1,29 @@
 * {
     box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 html {
     font-size: 10px;
 }
 
-body {
+body,
+ul,
+button {
     margin: 0;
     padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: 0;
+    background: none;
 }
 
 a {
