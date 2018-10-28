@@ -1,13 +1,12 @@
+$height-desktop: 8rem;
+
 .navigation {
     @include desktop {
         flex-direction: row;
-        height: 8rem;
         align-items: flex-end;
+        height: $height-desktop;
     }
     background-color: $primary-color;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,7 +19,7 @@
         }
         display: inline-block;
         width: 100%;
-        border-top: .1rem solid $primary-color-tint;
+        border-top: .1rem solid $secondary-color-dark;
     }
 
     &__links {
