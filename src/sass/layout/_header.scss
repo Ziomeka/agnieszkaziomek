@@ -1,4 +1,8 @@
 .header {
+    @include desktop {
+        position: fixed;
+        width: 100%;
+    }
     background-color: $primary-color;
 
     &__container {
@@ -24,6 +28,14 @@
         }
         margin-top: 1rem;
         width: 100%;
+    }
+}
+
+.header-wrapper {
+    &__fix {
+        @include desktop {
+            height: 9rem;
+        }
     }
 }
 
