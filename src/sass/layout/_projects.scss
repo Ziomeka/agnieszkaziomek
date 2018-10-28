@@ -3,9 +3,9 @@
         max-width: 1023px;
         margin: 0 auto;
         width: 100%;
-        color: $teal;
+        color: $primary-color;
         text-align: center;
-        border-bottom: 1px solid $teal;
+        border-bottom: 1px solid $primary-color;
     }
 
     &__article {
@@ -13,7 +13,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        padding: 1em 5%;
+        padding: 1rem 5%;
     }
 }
 
@@ -23,7 +23,7 @@
         text-align: left;
 
         &--title {
-            color: $teal;
+            color: $primary-color;
             margin-bottom: 0;
         }
 
@@ -34,7 +34,7 @@
     }
 
     &__element {
-        margin-top: 1em;
+        margin-top: 1rem;
 
         &--img,
         &--text {
@@ -44,10 +44,10 @@
         &--github,
         &--page {
             text-align: center;
-            border-top: 1px solid $teal;
-            border-left: 1px solid $teal;
-            border-bottom: 2px solid $teal;
-            border-right: 2px solid $teal;
+            border-top: 1px solid $primary-color;
+            border-left: 1px solid $primary-color;
+            border-bottom: 2px solid $primary-color;
+            border-right: 2px solid $primary-color;
             border-radius: 1em;
             display: inline-block;
             padding: 1em;
