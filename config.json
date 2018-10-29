@@ -1,0 +1,15 @@
+{
+    "src" : {
+        "html": "src/**/*.html",
+        "styles": "src/sass/**/",
+        "scripts": "src/**/*.js",
+        "images": "src/img/*.*"
+    },
+    "dest" : {
+        "catalog": "build",
+        "html": "build/",
+        "styles": "build/css/",
+        "scripts": "build/js/",
+        "images": "build/img/"
+    }
+}

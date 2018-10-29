@@ -1,5 +1,6 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const config = require('./config.json');
+const browserSync = require('browser-sync').create();
 
 require('./gulpTasks/styles')();
 require('./gulpTasks/copy')();
@@ -11,8 +12,8 @@ gulp.task('default', ['build'], function() {
     browserSync.init({
         server: './build',
     });
-    gulp.watch('src/sass/**/*.scss', ['styles']);
-    gulp.watch('src/**/*.js', ['babel']);
-    gulp.watch('src/**/*.html', ['copy']);
-    gulp.watch(['build/*.html', 'build/**/*.css', 'build/**/*.js']).on('change', browserSync.reload);
+    gulp.watch(config.src.styles + '*.scss', ['styles']);
+    gulp.watch(config.src.scripts, ['babel']);
+    gulp.watch(config.src.html, ['copy']);
+    gulp.watch([config.dest.html + '*.html', config.dest.styles + '*.css', config.dest.scripts + '*.js']).on('change', browserSync.reload);
 });

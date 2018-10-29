@@ -1,9 +1,10 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
+const config = require('../config.json');
 module.exports = function () {
     gulp.task('copy', function () {
         return Promise.all ([gulp.src('./src/*.html')
-            .pipe(gulp.dest('./build/')),
-        gulp.src('./src/img/*.*')
-            .pipe(gulp.dest('./build/img/'))]);
+            .pipe(gulp.dest(config.dest.html)),
+        gulp.src(config.src.images)
+            .pipe(gulp.dest(config.dest.images))]);
     });
 }

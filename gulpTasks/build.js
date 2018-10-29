@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var runSeq = require('run-sequence');
+const gulp = require('gulp');
+const runSeq = require('run-sequence');
 require('./clean')();
 require('./sass-lint')();
 require('./styles')();

@@ -6,7 +6,6 @@
         innerLinkTrigger: '.js-link',
         expandedClass: 'navigation--expanded',
     }
-
     const scroll = (element, offset) => {
         const startPositionY = window.scrollY;
         const destinationPositionY = element.getBoundingClientRect().top - offset + window.scrollY;
