@@ -3,6 +3,7 @@
         "html": "src/**/*.html",
         "styles": "src/sass/**/",
         "scripts": "src/**/*.js",
+        "tests": "src/**/*.test.js",
         "images": "src/img/*.*"
     },
     "dest" : {

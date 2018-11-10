@@ -7,7 +7,7 @@ require('./es-lint')();
 
 module.exports = function () {
     gulp.task('babel', ['es-lint'], function() {
-        return gulp.src(config.src.scripts)
+        return gulp.src([config.src.scripts, `!${config.src.tests}`])
             .pipe(sourcemaps.init())
             .pipe(babel({
                 presets: ['@babel/env'],
@@ -18,7 +18,7 @@ module.exports = function () {
     });
 
     gulp.task('babel:prod', ['es-lint'], function() {
-        return gulp.src(config.src.scripts)
+        return gulp.src([config.src.scripts, `!${config.src.tests}`])
             .pipe(babel({
                 presets: ['@babel/env'],
             }))
