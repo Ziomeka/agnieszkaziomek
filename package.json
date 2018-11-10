@@ -16,11 +16,19 @@
     "gulp-sass": "^3.2.1",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.4",
     "run-sequence": "^2.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+        "**/*.js",
+        "!**/node_modules/**"
+    ]
   },
   "repository": {
     "type": "git",
