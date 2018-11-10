@@ -10,4 +10,8 @@ module.exports = function () {
     gulp.task('build', function(callback){
         return runSeq('clean', 'sass-lint', ['styles', 'copy', 'babel'], callback);
     });
+
+    gulp.task('build:prod', function(callback){
+        return runSeq('clean', 'sass-lint', ['styles:prod', 'copy', 'babel:prod'], callback);
+    });
 }

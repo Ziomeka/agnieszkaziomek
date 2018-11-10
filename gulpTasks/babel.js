@@ -16,4 +16,13 @@ module.exports = function () {
             .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest(config.dest.scripts));
     });
+
+    gulp.task('babel:prod', ['es-lint'], function() {
+        return gulp.src(config.src.scripts)
+            .pipe(babel({
+                presets: ['@babel/env'],
+            }))
+            .pipe(concat('app.js'))
+            .pipe(gulp.dest(config.dest.scripts));
+    });
 }

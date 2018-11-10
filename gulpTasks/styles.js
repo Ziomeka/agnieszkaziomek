@@ -12,4 +12,10 @@ module.exports = function () {
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(config.dest.styles));
     });
+
+    gulp.task('styles:prod', ['sass-lint'], function() {
+        return gulp.src(config.src.styles + 'main.scss')
+            .pipe(sass().on('error', sass.logError))
+             .pipe(gulp.dest(config.dest.styles));
+    });
 }
