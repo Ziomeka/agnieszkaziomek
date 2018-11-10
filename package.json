@@ -25,9 +25,10 @@
   },
   "jest": {
     "verbose": true,
+    "collectCoverage" : true,
     "collectCoverageFrom": [
-        "**/*.js",
-        "!**/node_modules/**"
+        "src/js/*.js",
+        "!src/js/autoloader.js"
     ]
   },
   "repository": {
