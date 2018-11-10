@@ -1,8 +1,9 @@
-var gulp = require('gulp');
-var clean = require('gulp-clean');
+const gulp = require('gulp');
+const config = require('../config.json');
+const clean = require('gulp-clean');
 module.exports = function () {
     gulp.task('clean', function () {
-        return gulp.src('build', {read: false})
+        return gulp.src(config.dest.catalog, {read: false})
         .pipe(clean());
     });
 }
