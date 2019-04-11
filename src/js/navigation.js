@@ -20,9 +20,17 @@ module.exports = (function() {
                 startTime = currentTime;
             }
             const timeElapsed = currentTime - startTime;
-            const step = ease(timeElapsed, startPositionY, distance, duration);
+            let step = ease(timeElapsed, startPositionY, distance, duration);
+            if (destinationPositionY > startPositionY && step > destinationPositionY) {
+                step = destinationPositionY;
+            }
+            if (destinationPositionY < startPositionY && step < destinationPositionY) {
+                step = destinationPositionY;
+            }
+            console.log(step);
+            console.log(destinationPositionY);
             window.scrollTo(0, step);
-            if (timeElapsed < duration) {
+            if (step !== destinationPositionY) {
                 requestAnimationFrame(animate);
             }
         };
