@@ -1,0 +1,17 @@
+.scroll-to-top {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 5rem;
+    background-color: $primary-color;
+    border-radius: 50%;
+    color: $white;
+    font-weight: 800;
+    cursor: pointer;
+    display: none;
+
+    &--visible {
+        display: block;
+    }
+}
