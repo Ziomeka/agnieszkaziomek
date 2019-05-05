@@ -17,11 +17,11 @@
                     Ziomek
                 </div>
                 <nav class="header__navigation navigation js-menu">
-                    <button class="navigation__btn navigation__btn--open js-expand">o</button>
-                    <button class="navigation__btn navigation__btn--close js-expand">x</button>
+                    <button class="navigation__btn navigation__btn--open" data-action="expand">o</button>
+                    <button class="navigation__btn navigation__btn--close" data-action="fold">x</button>
                     <ul class="navigation__menu">
                         <li class="navigation__item">
-                            <a class="navigation__link js-link" href="#about" data-target="#about">O&nbsp;mnie</a>
+                            <a class="navigation__link" href="#about" data-action="go-to" data-target="#about">O&nbsp;mnie</a>
                         </li>
                         <li class="navigation__item">
                             <a class="navigation__link" href="https://github.com/Ziomeka" target="_blank">Github</a>
@@ -30,10 +30,10 @@
                             <a class="navigation__link" href="https://codepen.io/Poziomka/" target="_blank">Codepen</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link js-link" href="#projects" data-target="#projects">Portfolio</a>
+                            <a class="navigation__link" href="#projects" data-action="go-to" data-target="#projects">Portfolio</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link js-link" href="#contact" data-target="#contact">Kontakt</a>
+                            <a class="navigation__link" href="#contact" data-action="go-to" data-target="#contact">Kontakt</a>
                         </li>
                     </ul>
                 </nav>

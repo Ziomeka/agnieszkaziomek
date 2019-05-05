@@ -4,8 +4,6 @@ module.exports = (function() {
     const menu = {
         height: 100,
         rootElement: '.js-menu',
-        expandTrigger: '.js-expand',
-        innerLinkTrigger: '.js-link',
         expandedClass: 'navigation--expanded',
     }
     const scroll = (element, offset) => {
@@ -27,8 +25,6 @@ module.exports = (function() {
             if (destinationPositionY < startPositionY && step < destinationPositionY) {
                 step = destinationPositionY;
             }
-            console.log(step);
-            console.log(destinationPositionY);
             window.scrollTo(0, step);
             if (step !== destinationPositionY) {
                 requestAnimationFrame(animate);
@@ -37,21 +33,26 @@ module.exports = (function() {
         requestAnimationFrame(animate);
     };
 
+    const goTo = (link) => {
+        const target=document.querySelector(link);
+        scroll(target, menu.height);
+    }
+
     const navigate = () => {
-        document.querySelectorAll(menu.rootElement).forEach(function(root) {
-            root.querySelectorAll(menu.expandTrigger).forEach (function(trigger) {
-                trigger.addEventListener('click', function (){
-                    root.classList.toggle(menu.expandedClass);
-                })
-            });
-            root.querySelectorAll(menu.innerLinkTrigger).forEach(trigger => {
-                trigger.addEventListener('click', event => {
-                    event.preventDefault;
-                    root.classList.remove(menu.expandedClass);
-                    const target=document.querySelector(trigger.dataset.target);
-                    scroll(target, menu.height);
-                })
-            })
+        const root = document.querySelector(menu.rootElement);
+        root.addEventListener('click', (event) => {
+            switch(event.target.dataset.action) {
+            case 'expand':
+                root.classList.add(menu.expandedClass);
+                break;
+            case 'fold':
+                root.classList.remove(menu.expandedClass);
+                break;
+            case 'go-to':
+                event.preventDefault;
+                root.classList.remove(menu.expandedClass);
+                goTo(event.target.dataset.target);
+            }
         });
     }
     document.addEventListener('DOMContentLoaded', navigate);
