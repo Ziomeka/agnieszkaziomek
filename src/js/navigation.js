@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = (function() {
+const navigation = function() {
     const menu = {
         height: 100,
         rootElement: '.js-menu',
@@ -56,5 +54,5 @@ module.exports = (function() {
         });
     }
     document.addEventListener('DOMContentLoaded', navigate);
-    return navigate;
-})();
+};
+export { navigation };

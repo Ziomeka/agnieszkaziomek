@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = (function() {
+const scrollToTop = function() {
     const scrollToTop = () => {
         const elements = {
             trigger: '.js-scroll-to-top',
@@ -60,5 +58,6 @@ module.exports = (function() {
     };
 
     document.addEventListener('DOMContentLoaded', scrollToTop);
-    return scrollToTop;
-})();
+};
+
+export { scrollToTop };
