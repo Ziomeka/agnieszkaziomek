@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SassLintPlugin = require('sass-lint-webpack')
 
 module.exports = {
     module: {
@@ -56,5 +57,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'main.css',
         }),
+        new SassLintPlugin(),
     ]
 }
