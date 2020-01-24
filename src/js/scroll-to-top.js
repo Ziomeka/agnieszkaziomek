@@ -57,7 +57,7 @@ const scrollToTop = function() {
         return pageOffsetY;
     };
 
-    document.addEventListener('DOMContentLoaded', scrollToTop);
+    scrollToTop();
 };
 
 export { scrollToTop };

@@ -53,6 +53,6 @@ const navigation = function() {
             }
         });
     }
-    document.addEventListener('DOMContentLoaded', navigate);
+    navigate();
 };
 export { navigation };
