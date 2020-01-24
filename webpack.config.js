@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SassLintPlugin = require('sass-lint-webpack')
+const SassLintPlugin = require('sass-lint-webpack');
 
 module.exports = {
     module: {
@@ -44,19 +44,17 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader",
-                    "sass-loader"
-                ]
+                    "sass-loader",
+                ],
             },
-        ]
+        ],
     },
     plugins: [
         new HtmlWebPackPlugin({
             template: './src/index.html',
             filename: './index.html',
         }),
-        new MiniCssExtractPlugin({
-            filename: 'main.css',
-        }),
+        new MiniCssExtractPlugin(),
         new SassLintPlugin(),
-    ]
+    ],
 }
