@@ -3,42 +3,50 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^5.0.0",
-    "gulp-sass": "^3.2.1",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "jest": "^23.6.0",
-    "node-sass": "^4.9.4",
-    "run-sequence": "^2.2.1"
-  },
   "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
     "test": "jest"
   },
   "jest": {
     "verbose": true,
-    "collectCoverage" : true,
+    "collectCoverage": true,
     "collectCoverageFrom": [
-        "src/js/*.js",
-        "!src/js/autoloader.js"
+      "src/js/*.js"
     ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ziomeka/agnieszkaziomek.git"
   },
-  "author": "",
+  "keywords": [],
+  "author": "Agnieszka Ziomek",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ziomeka/agnieszkaziomek/issues"
   },
-  "homepage": "https://github.com/Ziomeka/agnieszkaziomek#readme"
+  "homepage": "https://github.com/Ziomeka/agnieszkaziomek#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^25.1.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-lint": "^1.13.1",
+    "sass-lint-webpack": "^1.0.2",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
 }

@@ -1,11 +1,9 @@
-'use strict';
-
-const navigate = require('./navigation.js');
+import {navigation} from './navigation';
 
 describe('Navigation', () => {
     const template = `<nav class="js-menu">
-            <button class="js-expand">o</button>
-            <button class="js-expand">x</button>
+            <button class="js-expand" data-action="expand">o</button>
+            <button class="js-expand" data-action="fold">x</button>
             <ul>
                 <li>
                     <a class="js-link">1</a>
@@ -19,12 +17,12 @@ describe('Navigation', () => {
     beforeEach(() => {
         document.body.innerHTML = template;
         triggers = document.querySelectorAll('.js-expand');
-        navigate();
+        navigation();
     });
 
     test('Should exist', () => {
-        expect(navigate).not.toBeNull();
-        expect(navigate).not.toBeUndefined();
+        expect(navigation).not.toBeNull();
+        expect(navigation).not.toBeUndefined();
     });
 
     test('should expand element, when open button is clicked, and close when close button is clicked', () => {

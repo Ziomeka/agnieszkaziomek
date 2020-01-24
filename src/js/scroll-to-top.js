@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = (function() {
+const scrollToTop = function() {
     const scrollToTop = () => {
         const elements = {
             trigger: '.js-scroll-to-top',
@@ -59,6 +57,7 @@ module.exports = (function() {
         return pageOffsetY;
     };
 
-    document.addEventListener('DOMContentLoaded', scrollToTop);
-    return scrollToTop;
-})();
+    scrollToTop();
+};
+
+export { scrollToTop };
