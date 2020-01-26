@@ -1,39 +1,14 @@
+import { scroll } from './utils/scroll';
 const navigation = function() {
     const menu = {
         height: 100,
         rootElement: '.js-menu',
         expandedClass: 'navigation--expanded',
     }
-    const scroll = (element, offset) => {
-        const startPositionY = window.scrollY;
-        const destinationPositionY = element.getBoundingClientRect().top - offset + window.scrollY;
-        const distance = destinationPositionY - startPositionY;
-        const duration = 800;
-        let startTime = null;
-        const ease = (t, b, c, d) => c * t / d + b;
-        const animate = currentTime => {
-            if (startTime === null) {
-                startTime = currentTime;
-            }
-            const timeElapsed = currentTime - startTime;
-            let step = ease(timeElapsed, startPositionY, distance, duration);
-            if (destinationPositionY > startPositionY && step > destinationPositionY) {
-                step = destinationPositionY;
-            }
-            if (destinationPositionY < startPositionY && step < destinationPositionY) {
-                step = destinationPositionY;
-            }
-            window.scrollTo(0, step);
-            if (step !== destinationPositionY) {
-                requestAnimationFrame(animate);
-            }
-        };
-        requestAnimationFrame(animate);
-    };
 
     const goTo = (link) => {
         const target=document.querySelector(link);
-        scroll(target, menu.height);
+        scroll(target, menu.height, 800);
     }
 
     const navigate = () => {
