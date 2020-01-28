@@ -2,21 +2,19 @@ import {navigation} from './navigation';
 
 describe('Navigation', () => {
     const template = `<nav class="js-menu">
-            <button class="js-expand" data-action="expand">o</button>
-            <button class="js-expand" data-action="fold">x</button>
+            <button data-action="expand">o</button>
+            <button data-action="fold">x</button>
             <ul>
                 <li>
-                    <a class="js-link">1</a>
+                    <a data-action="go-to" data-target="#link1">1</a>
                 </li>
                 <li>
-                    <a class="js-link">2</a>
+                    <a data-action="go-to" data-target="#link2">2</a>
                 </li>
             </ul>
         </nav>`;
-    let triggers;
     beforeEach(() => {
         document.body.innerHTML = template;
-        triggers = document.querySelectorAll('.js-expand');
         navigation();
     });
 
@@ -25,11 +23,13 @@ describe('Navigation', () => {
         expect(navigation).not.toBeUndefined();
     });
 
-    test('should expand element, when open button is clicked, and close when close button is clicked', () => {
+    test('Should expand element, when expand button is clicked, and fold when fold button is clicked', () => {
         const target = document.querySelector('.js-menu');
-        triggers[0].click();
+        const expandTrigger = document.querySelectorAll("[data-action = 'expand']")[0];
+        const foldTrigger = document.querySelectorAll("[data-action = 'fold']")[0];
+        expandTrigger.click();
         expect(target.classList.contains('navigation--expanded')).toBe(true);
-        triggers[1].click();
+        foldTrigger.click();
         expect(target.classList.contains('navigation--expanded')).toBe(false);
     });
 });
