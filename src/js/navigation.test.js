@@ -1,4 +1,5 @@
 import {navigation} from './navigation';
+import scroll from './utils/scroll';
 
 describe('Navigation', () => {
     const template = `<nav class="js-menu">
@@ -32,4 +33,12 @@ describe('Navigation', () => {
         foldTrigger.click();
         expect(target.classList.contains('navigation--expanded')).toBe(false);
     });
+
+    test('Should scroll to proper element when link with got-to action is clicked', () => {
+        const link = document.querySelectorAll("[data-action = 'go-to']")[0];
+        scroll.scrollToElementById = jest.fn();
+        link.click();
+        expect(scroll.scrollToElementById).toHaveBeenCalledWith('link1', 100, 800);
+    });
+
 });
