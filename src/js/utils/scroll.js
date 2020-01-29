@@ -1,7 +1,6 @@
 export default {
-    scrollToElement(element, offset, duration) {
+    scrollToPosition(destinationPositionY, duration) {
         const startPositionY = window.scrollY;
-        const destinationPositionY = element.getBoundingClientRect().top - offset + window.scrollY;
         const distance = destinationPositionY - startPositionY;
         let startTime = null;
         const ease = (t, b, c, d) => c * t / d + b;
@@ -23,6 +22,10 @@ export default {
             }
         };
         requestAnimationFrame(animate);
+    },
+    scrollToElement(element, offset, duration) {
+        const destinationPositionY = element ? element.getBoundingClientRect().top - offset + window.scrollY : 0;
+        this.scrollToPosition(destinationPositionY, duration);
     },
     scrollToElementById(id, offset, duration) {
         const item = document.getElementById(id);
