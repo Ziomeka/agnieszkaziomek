@@ -21,6 +21,9 @@ const navigation = function() {
             root.classList.remove(menu.expandedClass);
             const targetId = event.target.dataset.target.slice(1)
             scroll.scrollToElementById(targetId, menu.height, 800);
+            break;
+        case 'scroll-top':
+            window.scrollTo(0, 0);
         }
     });
 };
