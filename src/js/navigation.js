@@ -4,6 +4,7 @@ const navigation = function() {
         height: 100,
         rootElement: '.js-menu',
         expandedClass: 'navigation--expanded',
+        animationDuration: 800,
     }
 
     const root = document.querySelector(menu.rootElement);
@@ -20,10 +21,10 @@ const navigation = function() {
             event.preventDefault;
             root.classList.remove(menu.expandedClass);
             const targetId = event.target.dataset.target.slice(1);
-            scroll.scrollToElementById(targetId, menu.height, 800);
+            scroll.scrollToElementById(targetId, menu.height, menu.animationDuration);
             break;
         case 'scroll-top':
-            scroll.scrollToPosition(0, 800);
+            scroll.scrollToPosition(0, menu.animationDuration);
         }
     });
 };
