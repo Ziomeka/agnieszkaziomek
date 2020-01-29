@@ -19,11 +19,11 @@ const navigation = function() {
         case 'go-to':
             event.preventDefault;
             root.classList.remove(menu.expandedClass);
-            const targetId = event.target.dataset.target.slice(1)
+            const targetId = event.target.dataset.target.slice(1);
             scroll.scrollToElementById(targetId, menu.height, 800);
             break;
         case 'scroll-top':
-            window.scrollTo(0, 0);
+            scroll.scrollToPosition(0, 800);
         }
     });
 };

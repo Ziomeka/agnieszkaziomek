@@ -13,6 +13,7 @@ describe('Navigation', () => {
                     <a data-action="go-to" data-target="#link2">2</a>
                 </li>
             </ul>
+            <button data-action="scroll-top" >&uArr;</button>
         </nav>`;
     beforeEach(() => {
         document.body.innerHTML = template;
@@ -39,6 +40,13 @@ describe('Navigation', () => {
         scroll.scrollToElementById = jest.fn();
         link.click();
         expect(scroll.scrollToElementById).toHaveBeenCalledWith('link1', 100, 800);
+    });
+
+    test('Should scroll to page top when srcoll-top button is clicked', () => {
+        const scrollTop = document.querySelectorAll("[data-action = 'scroll-top']")[0];
+        scroll.scrollToPosition = jest.fn();
+        scrollTop.click();
+        expect(scroll.scrollToPosition).toHaveBeenCalledWith(0, 800);
     });
 
 });
