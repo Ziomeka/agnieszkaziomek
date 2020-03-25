@@ -1,22 +1,22 @@
 import {navigation} from './navigation';
+import scroll from './utils/scroll';
 
 describe('Navigation', () => {
     const template = `<nav class="js-menu">
-            <button class="js-expand" data-action="expand">o</button>
-            <button class="js-expand" data-action="fold">x</button>
+            <button data-action="expand">o</button>
+            <button data-action="fold">x</button>
             <ul>
                 <li>
-                    <a class="js-link">1</a>
+                    <a data-action="go-to" data-target="#link1">1</a>
                 </li>
                 <li>
-                    <a class="js-link">2</a>
+                    <a data-action="go-to" data-target="#link2">2</a>
                 </li>
             </ul>
+            <button data-action="scroll-top" >&uArr;</button>
         </nav>`;
-    let triggers;
     beforeEach(() => {
         document.body.innerHTML = template;
-        triggers = document.querySelectorAll('.js-expand');
         navigation();
     });
 
@@ -25,11 +25,28 @@ describe('Navigation', () => {
         expect(navigation).not.toBeUndefined();
     });
 
-    test('should expand element, when open button is clicked, and close when close button is clicked', () => {
+    test('Should expand element, when expand button is clicked, and fold when fold button is clicked', () => {
         const target = document.querySelector('.js-menu');
-        triggers[0].click();
+        const expandTrigger = document.querySelectorAll("[data-action = 'expand']")[0];
+        const foldTrigger = document.querySelectorAll("[data-action = 'fold']")[0];
+        expandTrigger.click();
         expect(target.classList.contains('navigation--expanded')).toBe(true);
-        triggers[1].click();
+        foldTrigger.click();
         expect(target.classList.contains('navigation--expanded')).toBe(false);
     });
+
+    test('Should scroll to proper element when link with got-to action is clicked', () => {
+        const link = document.querySelectorAll("[data-action = 'go-to']")[0];
+        scroll.scrollToElementById = jest.fn();
+        link.click();
+        expect(scroll.scrollToElementById).toHaveBeenCalledWith('link1', 100, 800);
+    });
+
+    test('Should scroll to page top when srcoll-top button is clicked', () => {
+        const scrollTop = document.querySelectorAll("[data-action = 'scroll-top']")[0];
+        scroll.scrollToPosition = jest.fn();
+        scrollTop.click();
+        expect(scroll.scrollToPosition).toHaveBeenCalledWith(0, 800);
+    });
+
 });
