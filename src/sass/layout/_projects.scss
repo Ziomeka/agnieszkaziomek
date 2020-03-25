@@ -6,73 +6,57 @@
         text-align: center;
         border-bottom: 1px solid $primary-color;
     }
-
-    &__article {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-        padding: 1rem 5%;
-    }
 }
 
-.article {
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
     &__header {
         width: 100%;
         text-align: left;
-
-        &--title {
-            margin-bottom: 0;
-        }
-
-        &--date {
-            font-size: .75em;
-        }
-
+        margin-bottom: 1rem;
     }
-
-    &__element {
-        margin-top: 1rem;
-
-        &--img,
-        &--text {
-            width: 100%;
+    &__header-title {
+        margin-bottom: 0;
+    }
+    &__header-date {
+        font-size: .75em;
+    }
+    &__description {
+        width: 100%;
+        @include desktop {
+            width: 45%;
+            order: 2;
         }
-
-        &--github,
+    }
+    &__image {
+        width: 100%;
+        @include desktop {
+            width: 45%;
+            order: 1;
+        }
+    }
+    &__cta {
+        margin: 1rem;
+        text-align: center;
+        border-top: 1px solid $secondary-color;
+        border-left: 1px solid $secondary-color;
+        border-bottom: 2px solid $secondary-color;
+        border-right: 2px solid $secondary-color;
+        border-radius: 1em;
+        display: inline-block;
+        padding: 1em;
         &--page {
-            text-align: center;
-            border-top: 1px solid $primary-color;
-            border-left: 1px solid $primary-color;
-            border-bottom: 2px solid $primary-color;
-            border-right: 2px solid $primary-color;
-            border-radius: 1em;
-            display: inline-block;
-            padding: 1em;
-
-        }
-    }
-}
-@media screen and (min-width: 769px) {
-    .article {
-        &__element {
-
-            &--img {
-                order: 1;
-                width: 45%;
-            }
-
-            &--github {
-                order: 3;
-            }
-
-            &--page {
+            @include desktop {
                 order: 4;
             }
-
-            &--text {
-                width: 45%;
-                order: 2;
+        }
+        &--github {
+            @include desktop {
+                order: 3;
             }
         }
     }

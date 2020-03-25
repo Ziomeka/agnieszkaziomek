@@ -9,7 +9,7 @@ body {
 
 a {
     text-decoration: none;
-    color: $primary-color;
+    color: $secondary-color;
     font-weight: 800;
 }
 
@@ -17,4 +17,9 @@ h1,
 h2,
 h3 {
     color: $primary-color;
+}
+
+em {
+    color: $primary-color;
+    font-weight: bold;
 }
