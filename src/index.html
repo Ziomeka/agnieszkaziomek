@@ -11,7 +11,7 @@
 <body>
     <div class=header-wrapper>
         <header class="header">
-            <div class="header__container container">
+            <div class="header__container wrapper">
                 <div class="header__logo logo">
                     Ziomek
                 </div>
@@ -44,122 +44,94 @@
         </div>
     </div>
     <main>
-        <section class="container">
+        <section class="wrapper">
             <h1>Agnieszka Ziomek, front&#8209;end&nbsp;developer</h1>
             <p>W drodze od juniora do profesjonalisty.</p>
         </section>
-        <section class="projects" id="projects">
+        <section class="projects wrapper" id="projects">
             <header class="projects__header">
                 <h2>Moje projekty</h2>
             </header>
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Strona domowa</h3>
-                    <span class="article__header--date">Bieżący</span>
+            <article class="project">
+                <header class="project__header">
+                    <h3 class="project__header-title">Strona domowa</h3>
+                    <span class="project__header-date">Bieżący</span>
                 </header>
-                <p class="article__element article__element--text">
+                <p class="project__description">
                     Strona, na której właśnie się znajdujesz, stanowi moją piaskownicę. 
                     Obecnie strona jest tworzona bez użycia frameworków - używam <em>vanilla js</em> oraz <em>Sass</em>. 
                     Projekt dawniej był budowany z użyciem <em>Gulp</em>a, obecnie używam <em>Webpack</em>a. 
                     Stosuję lintery, testy piszę w <em>Jest</em> i staram się pisać kod z poszanowaniem dobrych praktyk (Architektura 7 in 1, BEM) oraz semantyki html.</p>
-                <a class="article__element article__element--github" href="https://github.com/Ziomeka/agnieszkaziomek"
+                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/agnieszkaziomek"
                     target="_blank">Zobacz Github</a>
-                <img class="article__element article__element--img" src="img/projects_home.jpg" alt="Miniaturka widoku strony">
+                <img class="project__image" src="img/projects_home.jpg" alt="Miniaturka widoku strony">
             </article>
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Wykresy z wykorzystaniem canvas</h3>
-                    <time class="article__header--date" datetime="2017-12-11">Grudzień 2017</time>
+            <article class="project">
+                <header class="project__header">
+                    <h3 class="project__header-title">Wykresy z wykorzystaniem canvas</h3>
+                    <time class="project__header-date" datetime="2017-12-11">Grudzień 2017</time>
                 </header>
-                <p class="article__element article__element--text">Na fali popularności <a href="https://www.cryptokitties.co/"
-                        target="_blank">cryptokitties</a> zbudowałam stronę pozwalającą przeglądać statystyki
+                <p class="project__description">
+                    Na fali popularności <a href="https://www.cryptokitties.co/" target="_blank">cryptokitties</a> zbudowałam stronę pozwalającą przeglądać statystyki
                     popularnosci cech u tych niezywkłych stworzeń na próbce losowej pobranej danego dnia. Moim celem
-                    było
-                    wstępne zapoznanie się z elementem canvas.</p>
-                <a class="article__element article__element--github" href="https://github.com/Ziomeka/purristics"
+                    było wstępne zapoznanie się z elementem canvas.
+                </p>
+                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/purristics"
                     target="_blank">Zobacz Github</a>
-                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/Purristics/stats/0002.html" target="_blank">Zobacz
+                <a class="project__cta project__cta--page" href="http://agnieszkaziomek.pl/pages/Purristics/stats/0002.html" target="_blank">Zobacz
                     stronę</a>
-                <img class="article__element article__element--img" src="img/projects_canvas.jpg" alt="Miniaturka widoku strony">
+                <img class="project__image" src="img/projects_canvas.jpg" alt="Miniaturka widoku strony">
             </article>
 
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Autokolelacja</h3>
-                    <time class="article__header--date" datetime="2017-10-15">Listopad 2017</time>
+            <article class="project">
+                <header class="project__header">
+                    <h3 class="project__header-title">Autokolelacja</h3>
+                    <time class="project__header-date" datetime="2017-10-15">Listopad 2017</time>
                 </header>
-                <p class="article__element article__element--text">Proste narzędzie do wykrywania autokorelacji
+                <p class="project__description">
+                    Proste narzędzie do wykrywania autokorelacji
                     sygnału. W aplikacji wykorzystałam takie rozwiązania jak service worker i synchroniczne wczytywanie
                     plików. Użyłam biblioteki do tworzenia wykresów - jqplot, natomiast potrzebne algorytmy
-                    statystyczne zaimplementowałam
-                    samodzielnie.
+                    statystyczne zaimplementowałam samodzielnie.
                 </p>
-                <a class="article__element article__element--github" href="https://github.com/Ziomeka/Autocorrelation"
+                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/Autocorrelation"
                     target="_blank">Zobacz Github</a>
-                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/inz/inz.html"
+                <a class="project__cta project__cta--page" href="http://agnieszkaziomek.pl/pages/inz/inz.html"
                     target="_blank">Zobacz stronę</a>
-                <img class="article__element article__element--img" src="img/projects_autocorrelation.jpg" alt="Miniaturka widoku strony">
+                <img class="project__image" src="img/projects_autocorrelation.jpg" alt="Miniaturka widoku strony">
             </article>
 
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Generator html</h3>
-                    <time class="article__header--date" datetime="2017-09-20">Wrzesień 2017</time>
+            <article class="project">
+                <header class="project__header">
+                    <h3 class="project__header-title">Generator html</h3>
+                    <time class="project__header-date" datetime="2017-09-20">Wrzesień 2017</time>
                 </header>
-                <p class="article__element article__element--text">Jeden z projektów do których planuję powrócić, po
+                <p class="project__description">
+                    Jeden z projektów do których planuję powrócić, po
                     odpowiednim zgłębieniu zagadnień architektury aplikacji. W trakcie tworzenia był dla mnie
-                    ćwiczeniem w odejściu od jquery na rzecz vanilla js.</p>
-                <a class="article__element article__element--page" href="https://codepen.io/Poziomka/pen/MEeqpE" target="_blank">Zobacz
+                    ćwiczeniem w odejściu od jquery na rzecz vanilla js.
+                </p>
+                <a class="project__cta project__cta--page" href="https://codepen.io/Poziomka/pen/MEeqpE" target="_blank">Zobacz
                     codepen</a>
-                <img class="article__element article__element--img" src="img/projects_html-generator.jpg" alt="Miniaturka widoku strony">
+                <img class="project__image" src="img/projects_html-generator.jpg" alt="Miniaturka widoku strony">
             </article>
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Symulator windy</h3>
-                    <time class="article__header--date" datetime="2017-06-02">Czerwiec 2017</time>
+            <article class="project">
+                <header class="project__header">
+                    <h3 class="project__header-title">Symulator windy</h3>
+                    <time class="project__header-date" datetime="2017-06-02">Czerwiec 2017</time>
                 </header>
-                <p class="article__element article__element--text">Prosty symulator windy, który stworzyłam w ramach
-                    projektu na zajeciach na uczelni z wykorzystaniem jQuery</p>
-                <a class="article__element article__element--github" href="https://github.com/Ziomeka/ElevatorSymulator"
+                <p class="project__description">
+                    Prosty symulator windy, który stworzyłam w ramach
+                    projektu na zajeciach na uczelni z wykorzystaniem jQuery
+                </p>
+                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/ElevatorSymulator"
                     target="_blank">Zobacz Github</a>
-                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/winda/index.html"
+                <a class="project__cta project__cta--page" href="http://agnieszkaziomek.pl/pages/winda/index.html"
                     target="_blank">Zobacz stronę</a>
-                <img class="article__element article__element--img" src="img/projects_lift.jpg" alt="Miniaturka widoku strony">
+                <img class="project__image" src="img/projects_lift.jpg" alt="Miniaturka widoku strony">
             </article>
-
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Converter</h3>
-                    <time class="article__header--date" datetime="2017-05-04">Maj 2017</time>
-                </header>
-                <p class="article__element article__element--text">Bardzo prosty konwerter walut wykonany jako zadanie
-                    rekrutacyjne</p>
-                <a class="article__element article__element--github" href="https://github.com/Ziomeka/ExchangeConverter"
-                    target="_blank">Zobacz Github</a>
-                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/converter/index.html"
-                    target="_blank">Zobacz stronę</a>
-                <img class="article__element article__element--img" src="img/projects_converter.jpg" alt="Miniaturka widoku strony">
-            </article>
-
-            <article class="projects__article wraper">
-                <header class="article__header">
-                    <h3 class="article__header--title">Rating menu</h3>
-                    <time class="article__header--date" datetime="2017-05-02">Maj 2017</time>
-                </header>
-                <p class="article__element article__element--text">Zadanie z kursu jQuery, proste menu do oceniania
-                    przez kliknięcie w symbol i możliwością zmiany skali oceny</p>
-                <a class="article__element article__element--github" href="https://github.com/Ziomeka/RatingMenu"
-                    target="_blank">Zobacz Github</a>
-                <a class="article__element article__element--page" href="http://agnieszkaziomek.pl/pages/rate/index.html"
-                    target="_blank">Zobacz stronę</a>
-                <img class="article__element article__element--img" src="img/projects_rate.jpg" alt="Miniaturka widoku strony">
-            </article>
-            <div class="cta-container wraper">
-                <a class="cta" href="https://github.com/Ziomeka" target="_blank">Mój github</a>
-                <a class="cta" href="https://codepen.io/Poziomka/" target="_blank">Mój codePen</a>
-            </div>
         </section>
-        <section class="about wraper" id="about">
+        <section class="about wrapper" id="about">
             <header class="about__header">
                 <h2>O mnie</h2>
             </header>
@@ -202,7 +174,7 @@
             <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
         </section>
 
-        <section class="contact wraper" id="contact">
+        <section class="contact wrapper" id="contact">
             <header class="contact__header">
                 <h2>Kontakt</h2>
             </header>
