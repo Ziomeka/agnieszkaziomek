@@ -3,15 +3,17 @@
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+
     &__title {
         width: 100%;
         flex-shrink: 0;
     }
+
     &__text {
         @media (min-width: 600px) {
             max-width: calc(100% - 22rem);
         }
-    };
+    }
 
     &__img {
         width: 20rem;
