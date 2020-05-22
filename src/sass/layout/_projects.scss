@@ -14,31 +14,37 @@
     justify-content: space-around;
     align-items: flex-start;
     padding: 1rem;
+
     &__header {
         width: 100%;
         text-align: left;
         margin-bottom: 1rem;
     }
+
     &__header-title {
         margin-bottom: 0;
     }
+
     &__header-date {
         font-size: .75em;
     }
+
     &__description {
-        width: 100%;
         @include desktop {
             width: 45%;
             order: 2;
         }
-    }
-    &__image {
         width: 100%;
+    }
+
+    &__image {
         @include desktop {
             width: 45%;
             order: 1;
         }
+        width: 100%;
     }
+
     &__cta {
         margin: 1rem;
         text-align: center;
@@ -49,11 +55,13 @@
         border-radius: 1em;
         display: inline-block;
         padding: 1em;
+
         &--page {
             @include desktop {
                 order: 4;
             }
         }
+
         &--github {
             @include desktop {
                 order: 3;
