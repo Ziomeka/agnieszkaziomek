@@ -20,13 +20,7 @@
                     <button class="navigation__btn navigation__btn--close" data-action="fold">x</button>
                     <ul class="navigation__menu">
                         <li class="navigation__item">
-                            <a class="navigation__link" href="#about" data-action="go-to" data-action="go-to" data-target="#about">O&nbsp;mnie</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="https://github.com/Ziomeka" target="_blank">Github</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="https://codepen.io/Poziomka/" target="_blank">Codepen</a>
+                            <a class="navigation__link" href="#about" data-action="go-to" data-target="#about">O mnie</a>
                         </li>
                         <li class="navigation__item">
                             <a class="navigation__link" href="#projects" data-action="go-to" data-target="#projects">Portfolio</a>
@@ -44,9 +38,16 @@
         </div>
     </div>
     <main>
-        <section class="wrapper">
-            <h1>Agnieszka Ziomek, front&#8209;end&nbsp;developer</h1>
-            <p>W drodze od juniora do profesjonalisty.</p>
+        <section class="about wrapper" id="about">
+            <h1 class="about__title">Agnieszka Ziomek, front&#8209;end&nbsp;developer</h1>
+                <p class="about__text">
+                    Jestem front-end developerem z dużym doświadczeniem z frameworkiem Vue. Pracowałam zarówno przy tworzeniu nowych portali, jak i przy przebudowach i utrzymaniu. Wyróżniam się komunikatywnością i wysokimi umiejętnościami analitycznymi. Pierwsze kroki w zawodzie stawiałam pod opieką mentora, co zaowocowało dobrymi nawykami i przywiązywaniem wagi do code review jako sposobu wymiany wiedzy, utrzymania jakości kodu i budowania dobrych relacji w zespole. Obecnie szukam pracy, która umożliwi mi zdobycie doświadczenia komercyjnego w innych frameworkach frontendowych jak Angular i React.
+                    <br>
+                    Zaprszam na mój 
+                    <a href="https://github.com/Ziomeka" target="_blank">Github</a> i 
+                    <a href="https://codepen.io/Poziomka/" target="_blank">Codepen</a>.
+                </p>
+            <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
         </section>
         <section class="projects wrapper" id="projects">
             <header class="projects__header">
@@ -146,49 +147,6 @@
                 <img class="project__image" src="img/projects_lift.jpg" alt="Miniaturka widoku strony">
             </article>
         </section>
-        <section class="about wrapper" id="about">
-            <header class="about__header">
-                <h2>O mnie</h2>
-            </header>
-            <div class="about__text">
-                <h3 class="about__title">Mój cel:</h3>
-                <p>Zostać Front-end developerem profesjonalistą.</p>
-                <h3 class="about__title">Mój plan:</h3>
-                <ol class="about__plan">
-                    <li><span class="about__plan--emphasis">Etap 1 (ukończony)</span> - content developer w <a href="http://www.nowaera.pl/"
-                            target="_blank">Nowa Era</a>, zapoznałam się procesem developerskim, zasadami komunikacji z
-                        biznesem,
-                        narzędziami pracy. Pracowałam przy przygotowaniu mutimedialnych podręczników oraz mailingów
-                        html.</li>
-                    <li><span class="about__plan--emphasis">Etap 2 (obecnie)</span> - od czerwca 2018 stanowisko junior
-                        front-end
-                        developera w <a href="http://www.nowaera.pl/" target="_blank">Nowa Era</a>. Pracuję przy dużych
-                        portalach
-                        z materiałami edukacyjnymi dla licealistów pod nadzorem doświadczonego mentora. Moje zadania
-                        polegają na
-                        przygotowaniu statycznych widoków, prostych funkcji vanilla js lub componentów vue z
-                        uwzględnieniem testów.</li>
-                    <li><span class="about__plan--emphasis">Etap 3 (planowany)</span> - Zapoznanie się ze specyfiką
-                        pracy dla klienta
-                        zewnętrznego w metodzie agile oraz jednym z popularnych frameworków. </li>
-                    <li><span class="about__plan--emphasis">Etap 4 </span> - ? </li>
-                </ol>
-                <h3 class="about__title">Zagadnienia na których skupia się obecnie moja edukacja to:</h3>
-                <ul class="about__focus">
-                    <li>dobre nawyki, czysty kod</li>
-                    <li>semantyczny HTML</li>
-                    <li>uporządkowany CSS (BEM, 7in1)</li>
-                    <li>Vanilla JS, podstawy architektury oprogramowania</li>
-                    <li>jest (unit tests, TDD)</li>
-                </ul>
-                <blockquote class="about__quote">
-                    <p>Do or do not, there is no try</p>
-                    <footer>&ndash;Mistrz Yoda</footer>
-                </blockquote>
-            </div>
-            <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
-        </section>
-
         <section class="contact wrapper" id="contact">
             <header class="contact__header">
                 <h2>Kontakt</h2>
