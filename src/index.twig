@@ -11,18 +11,7 @@
 <body>
     {% include "./templates/header/header.twig" %}
     <main>
-        <section class="about wrapper" id="about">
-            <h1 class="about__title">Agnieszka Ziomek, front&#8209;end&nbsp;developer</h1>
-                <p class="about__text">
-                    Jestem front-end developerem z dużym doświadczeniem z frameworkiem Vue. Pracowałam zarówno przy tworzeniu nowych portali, jak i przy przebudowach i utrzymaniu. Wyróżniam się komunikatywnością i wysokimi umiejętnościami analitycznymi. Pierwsze kroki w zawodzie stawiałam pod opieką mentora, co zaowocowało dobrymi nawykami i przywiązywaniem wagi do code review jako sposobu wymiany wiedzy, utrzymania jakości kodu i budowania dobrych relacji w zespole. Obecnie szukam pracy, która umożliwi mi zdobycie doświadczenia komercyjnego w innych frameworkach frontendowych jak Angular i React.
-                    <br>
-                    Zaprszam na mój 
-                    <a href="https://github.com/Ziomeka" target="_blank">Github</a> i 
-                    <a href="https://codepen.io/Poziomka/" target="_blank">Codepen</a>.
-                    <a class="cta" href="./ZiomekAgnieszka_cv.pdf" target="_blank">Zobacz moje CV</a>
-                </p>
-            <img class="about__img" src="img/author_portrait.jpg" alt="Fotografia przedstawiająca autorkę strony">
-        </section>
+        {% include "./templates/about/about.twig" %}
         <section class="projects wrapper" id="projects">
             <header class="projects__header">
                 <h2>Moje projekty</h2>
