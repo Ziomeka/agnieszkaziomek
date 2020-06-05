@@ -1,0 +1,10 @@
+<nav class="header__navigation navigation js-menu">
+    <button class="navigation__btn navigation__btn--open" data-action="expand">o</button>
+    <button class="navigation__btn navigation__btn--close" data-action="fold">x</button>
+        <ul class="navigation__menu">
+            {% include "./navigation-item.twig" with { link: "#about", action: "go-to", text: "O mnie" } %}
+            {% include "./navigation-item.twig" with { link: "#projects", action: "go-to", text: "Portfolio" } %}
+            {% include "./navigation-item.twig" with { link: "#contact", action: "go-to", text: "Kontakt" } %}
+        </ul>
+    <button class = "scroll-to-top js-scroll-to-top scroll-to-top--visible" data-action="scroll-top" >&uArr;</button>
+</nav>

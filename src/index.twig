@@ -9,34 +9,7 @@
 </head>
 
 <body>
-    <div class=header-wrapper>
-        <header class="header">
-            <div class="header__container wrapper">
-                <div class="header__logo logo">
-                    Ziomek 
-                </div>
-                <nav class="header__navigation navigation js-menu">
-                    <button class="navigation__btn navigation__btn--open" data-action="expand">o</button>
-                    <button class="navigation__btn navigation__btn--close" data-action="fold">x</button>
-                    <ul class="navigation__menu">
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#about" data-action="go-to" data-target="#about">O mnie</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#projects" data-action="go-to" data-target="#projects">Portfolio</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#contact" data-action="go-to" data-target="#contact">Kontakt</a>
-                        </li>
-                    </ul>
-                    <button class = "scroll-to-top js-scroll-to-top scroll-to-top--visible" data-action="scroll-top" >&uArr;</button>
-                </nav>
-            </div>
-        </header>
-        <div class=header-wrapper__fix>
-
-        </div>
-    </div>
+    {% include "./templates/header/header.twig" %}
     <main>
         <section class="about wrapper" id="about">
             <h1 class="about__title">Agnieszka Ziomek, front&#8209;end&nbsp;developer</h1>
