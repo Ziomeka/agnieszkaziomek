@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SassLintPlugin = require('sass-lint-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -60,6 +61,11 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: './src/index.twig',
             filename: './index.html',
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/img', to: 'img' },
+            ],
         }),
         new MiniCssExtractPlugin(),
         new SassLintPlugin(),
