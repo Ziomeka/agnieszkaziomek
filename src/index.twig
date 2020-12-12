@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 
 <head>
     <title>Agnieszka Ziomek</title>
@@ -12,119 +12,7 @@
     {% include "./templates/header/header.twig" %}
     <main>
         {% include "./templates/about/about.twig" %}
-        <section class="projects wrapper" id="projects">
-            <header class="projects__header">
-                <h2>Moje projekty</h2>
-            </header>
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">beVitch</h3>
-                    <span class="project__header-date">Kiwiecień 2020 - aktualnie</span>
-                </header>
-                <p class="project__description">
-                    <a href="https://bevitch.github.io/?path=/story/getting-started-installation--page"
-                    target="_blank">beVitch</a> to biblioteka komponentów UI dla <em>Vue</em>.  Jest to projekt open source, z wykorzystaniem <em>storybook</em>, pisany w <em>TypeScript</em>.
-                </p>
-                <a class="project__cta project__cta--page" href="https://bevitch.github.io/?path=/story/getting-started-installation--page"
-                    target="_blank">Zobacz storybook</a>
-                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/agnieszkaziomek"
-                    target="_blank">Zobacz Github</a>
-                <img class="project__image" src="img/projects_bevitch.jpg" alt="Logo beVitch">
-            </article>
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">dlaucznia.pl</h3>
-                    <span class="project__header-date">Marzec 2019 - Luty 2020</span>
-                </header>
-                <p class="project__description">
-                    <a href="https://www.dlaucznia.pl/"
-                    target="_blank">Dlaucznia.pl</a> jest komercyjnym projektem <a href="https://www.nowaera.pl/"
-                    target="_blank">Nowej Ery</a>, przy którym pracowałam od etapu prac koncepcyjnych.
-                    Jest to aplikacja <em>PWA</em>, stworzona z użyciem <em>Vue</em>, <em>Vuex</em>, <em>Nuxt</em>. Projekt prowadzony w metodyce <em>SCRUM</em>.
-                </p>
-                <a class="project__cta project__cta--page" href="https://www.dlaucznia.pl/"
-                    target="_blank">Zobacz stronę</a>
-                <img class="project__image" src="img/projects_dlu.jpg" alt="Miniaturka widoku strony">
-            </article>
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">Strona domowa</h3>
-                    <span class="project__header-date">Bieżący</span>
-                </header>
-                <p class="project__description">
-                    Strona, na której właśnie się znajdujesz, stanowi moją piaskownicę. 
-                    Obecnie strona jest tworzona bez użycia frameworków - używam <em>vanilla js</em> oraz <em>Sass</em>. 
-                    Projekt dawniej był budowany z użyciem <em>Gulp</em>a, obecnie używam <em>Webpack</em>a. 
-                    Stosuję lintery, testy piszę w <em>Jest</em> i staram się pisać kod z poszanowaniem dobrych praktyk (Architektura 7 in 1, BEM) oraz semantyki html.</p>
-                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/agnieszkaziomek"
-                    target="_blank">Zobacz Github</a>
-                <img class="project__image" src="img/projects_home.jpg" alt="Miniaturka widoku strony">
-            </article>
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">Wykresy z wykorzystaniem canvas</h3>
-                    <time class="project__header-date" datetime="2017-12-11">Grudzień 2017</time>
-                </header>
-                <p class="project__description">
-                    Na fali popularności <a href="https://www.cryptokitties.co/" target="_blank">cryptokitties</a> zbudowałam stronę pozwalającą przeglądać statystyki
-                    popularnosci cech u tych niezywkłych stworzeń na próbce losowej pobranej danego dnia. Moim celem
-                    było wstępne zapoznanie się z elementem canvas.
-                </p>
-                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/purristics"
-                    target="_blank">Zobacz Github</a>
-                <a class="project__cta project__cta--page" href="http://agnieszkaziomek.pl/pages/Purristics/stats/0002.html" target="_blank">Zobacz
-                    stronę</a>
-                <img class="project__image" src="img/projects_canvas.jpg" alt="Miniaturka widoku strony">
-            </article>
-
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">Autokolelacja</h3>
-                    <time class="project__header-date" datetime="2017-10-15">Listopad 2017</time>
-                </header>
-                <p class="project__description">
-                    Proste narzędzie do wykrywania autokorelacji
-                    sygnału. W aplikacji wykorzystałam takie rozwiązania jak service worker i synchroniczne wczytywanie
-                    plików. Użyłam biblioteki do tworzenia wykresów - jqplot, natomiast potrzebne algorytmy
-                    statystyczne zaimplementowałam samodzielnie.
-                </p>
-                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/Autocorrelation"
-                    target="_blank">Zobacz Github</a>
-                <a class="project__cta project__cta--page" href="http://agnieszkaziomek.pl/pages/inz/inz.html"
-                    target="_blank">Zobacz stronę</a>
-                <img class="project__image" src="img/projects_autocorrelation.jpg" alt="Miniaturka widoku strony">
-            </article>
-
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">Generator html</h3>
-                    <time class="project__header-date" datetime="2017-09-20">Wrzesień 2017</time>
-                </header>
-                <p class="project__description">
-                    Jeden z projektów do których planuję powrócić, po
-                    odpowiednim zgłębieniu zagadnień architektury aplikacji. W trakcie tworzenia był dla mnie
-                    ćwiczeniem w odejściu od jquery na rzecz vanilla js.
-                </p>
-                <a class="project__cta project__cta--page" href="https://codepen.io/Poziomka/pen/MEeqpE" target="_blank">Zobacz
-                    codepen</a>
-                <img class="project__image" src="img/projects_html-generator.jpg" alt="Miniaturka widoku strony">
-            </article>
-            <article class="project">
-                <header class="project__header">
-                    <h3 class="project__header-title">Symulator windy</h3>
-                    <time class="project__header-date" datetime="2017-06-02">Czerwiec 2017</time>
-                </header>
-                <p class="project__description">
-                    Prosty symulator windy, który stworzyłam w ramach
-                    projektu na zajeciach na uczelni z wykorzystaniem jQuery
-                </p>
-                <a class="project__cta project__cta--github" href="https://github.com/Ziomeka/ElevatorSymulator"
-                    target="_blank">Zobacz Github</a>
-                <a class="project__cta project__cta--page" href="http://agnieszkaziomek.pl/pages/winda/index.html"
-                    target="_blank">Zobacz stronę</a>
-                <img class="project__image" src="img/projects_lift.jpg" alt="Miniaturka widoku strony">
-            </article>
-        </section>
+        {% include "./templates/projects/projects.twig" %}
         <section class="contact wrapper" id="contact">
             <header class="contact__header">
                 <h2>Kontakt</h2>
