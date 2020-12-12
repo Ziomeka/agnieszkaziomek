@@ -3,11 +3,9 @@ $xs-width: 340px;
 
 $white: #fff;
 $white-ivory: #fffff0;
-$blue-teal: #004467;
-$red-crimson: #740c15;
-$green-fern: #040;
+$green-fern: #030;
+$purple: #303;
 $green-olive: #7a9f35;
-$grey-steel: #777;
 
 $heveltica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $roboto: 'Roboto', sans-serif;
@@ -16,7 +14,7 @@ $roboto-thin: 'Roboto', sans-serif;
 $primary-color: $green-fern;
 $primary-color-light: lighten($primary-color, 10%);
 $primary-color-dark: darken($primary-color, 10%);
-$secondary-color: $green-olive;
-$secondary-color-light: lighten($secondary-color, 10%);
-$secondary-color-dark: darken($secondary-color, 10%);
+$secondary-color: $purple;
+$secondary-color-light: lighten($purple, 10%);
+$secondary-color-dark: darken($purple, 10%);
 $primary-font: $roboto;

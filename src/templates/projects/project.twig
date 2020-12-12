@@ -1,0 +1,19 @@
+<article class="project">
+    <header class="project__header">
+        <h3 class="project__header-title">{{title}}</h3>
+        <span class="project__header-date">{{date}}</span>
+    </header>
+    <p class="project__description">
+        {{description}}
+    </p>
+    {% for button in buttons %}
+    <a
+        class="project__cta project__cta"
+        href={{button.href}}
+        target={{button.target}}
+    >
+        {{button.text}}
+    </a>
+    {% endfor %}
+    <img class="project__image" src="{{image.src}}" alt="{{image.alt}}">
+</article>
