@@ -54,7 +54,8 @@
         padding: 1em;
         order: 3;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: lighten($secondary-color, 85%);
         }
     }
