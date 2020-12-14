@@ -48,7 +48,11 @@ $height-desktop: 8rem;
         width: 100%;
 
         &:hover {
-            color: $secondary-color;
+            color: $secondary-color-light;
+        }
+
+        &:focus {
+            border: 1px solid $secondary-color-light;
         }
     }
 

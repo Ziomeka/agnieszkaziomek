@@ -14,4 +14,9 @@
     &--visible {
         display: block;
     }
+
+    &:hover,
+    &:focus {
+        background-color: $primary-color-light;
+    }
 }
